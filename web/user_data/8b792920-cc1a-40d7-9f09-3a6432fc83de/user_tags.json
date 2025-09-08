@@ -1,0 +1,120 @@
+{
+  "user_id": "8b792920-cc1a-40d7-9f09-3a6432fc83de",
+  "created_at": "2025-09-08T17:03:20.815728",
+  "last_updated": "2025-09-08T17:09:35.867515",
+  "tag_dimensions": {
+    "用户核心画像": {
+      "年龄段": [
+        {
+          "tag_name": "25-34",
+          "confidence": 0.6363636363636362,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-08T17:05:42.024378",
+          "last_reinforced": "2025-09-08T17:05:42.024378",
+          "evidence_list": [
+            "用户是程序员，长期坐电脑前工作；妈妈55岁，用户作为子女"
+          ],
+          "decay_rate": 0.1
+        }
+      ],
+      "性别": [],
+      "所在地区": [],
+      "健康角色": [
+        {
+          "tag_name": "患者",
+          "confidence": 0.8181818181818181,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-08T17:05:42.024442",
+          "last_reinforced": "2025-09-08T17:05:42.024442",
+          "evidence_list": [
+            "颈椎和腰部很不舒服；眼睛干涩"
+          ],
+          "decay_rate": 0.1
+        },
+        {
+          "tag_name": "家属",
+          "confidence": 0.8181818181818181,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-08T17:05:42.024447",
+          "last_reinforced": "2025-09-08T17:05:42.024447",
+          "evidence_list": [
+            "我妈妈55岁，作为子女应该怎么关心和帮助她"
+          ],
+          "decay_rate": 0.1
+        }
+      ]
+    },
+    "产品使用路径与偏好": {
+      "核心功能偏好": [],
+      "交互方式偏好": []
+    },
+    "用户意图与转化阶段": {
+      "具体意图分类": [
+        {
+          "tag_name": "健康咨询",
+          "confidence": 0.9090909090909091,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-08T17:05:42.024452",
+          "last_reinforced": "2025-09-08T17:05:42.024452",
+          "evidence_list": [
+            "所有对话都是寻求健康建议的提问，包括缓解方法、关心方式、运动开始、症状确认"
+          ],
+          "decay_rate": 0.1
+        }
+      ],
+      "转化阶段": [
+        {
+          "tag_name": "信息收集",
+          "confidence": 0.7272727272727273,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-08T17:05:42.024455",
+          "last_reinforced": "2025-09-08T17:05:42.024455",
+          "evidence_list": [
+            "用户询问缓解方法、关心方式、运动开始、症状确认，但没有表示立即行动或购买"
+          ],
+          "decay_rate": 0.1
+        }
+      ]
+    },
+    "用户商业价值": {
+      "价值等级": [],
+      "付费敏感度": []
+    }
+  },
+  "profile_maturity": 0.5,
+  "total_interactions": 1,
+  "dimension_summaries": [
+    {
+      "dimension_name": "用户核心画像",
+      "subdimension_name": "年龄段",
+      "dominant_tag": "25-34",
+      "confidence": 0.6363636363636362,
+      "tag_count": 1,
+      "last_updated": "2025-09-08T17:05:42.024378"
+    },
+    {
+      "dimension_name": "用户核心画像",
+      "subdimension_name": "健康角色",
+      "dominant_tag": "患者",
+      "confidence": 0.8181818181818181,
+      "tag_count": 2,
+      "last_updated": "2025-09-08T17:05:42.024442"
+    },
+    {
+      "dimension_name": "用户意图与转化阶段",
+      "subdimension_name": "具体意图分类",
+      "dominant_tag": "健康咨询",
+      "confidence": 0.9090909090909091,
+      "tag_count": 1,
+      "last_updated": "2025-09-08T17:05:42.024452"
+    },
+    {
+      "dimension_name": "用户意图与转化阶段",
+      "subdimension_name": "转化阶段",
+      "dominant_tag": "信息收集",
+      "confidence": 0.7272727272727273,
+      "tag_count": 1,
+      "last_updated": "2025-09-08T17:05:42.024455"
+    }
+  ]
+}

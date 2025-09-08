@@ -1,0 +1,150 @@
+{
+  "user_id": "fa03aff2-f244-4c54-94f6-0f3b98f2704d",
+  "tag_events": [
+    {
+      "timestamp": "2025-09-08T16:25:01.870715",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "患者",
+            "confidence": 0.9,
+            "evidence": "最近颈椎和腰部都很不舒服",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T16:24:07.813949"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "寻求健康建议",
+            "confidence": 1.0,
+            "evidence": "有什么好的缓解方法？",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T16:24:07.813990"
+          },
+          {
+            "name": "信息收集",
+            "confidence": 0.8,
+            "evidence": "用户询问缓解方法，表明在收集信息",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-08T16:24:07.813996"
+          }
+        ],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-08T16:27:15.311571",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "家属",
+            "confidence": 0.9,
+            "evidence": "作为子女",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T16:26:21.513799"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "寻求建议",
+            "confidence": 1.0,
+            "evidence": "应该怎么关心和帮助她？",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T16:26:21.513822"
+          }
+        ],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-08T16:30:03.564819",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "健身初学者",
+            "confidence": 0.9,
+            "evidence": "用户表示'完全没有经验'",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T16:29:05.223667"
+          }
+        ],
+        "产品使用路径与偏好": [
+          {
+            "name": "健身指导咨询",
+            "confidence": 0.8,
+            "evidence": "用户提问'应该从什么运动开始比较好？有什么注意事项？'",
+            "category": "产品使用路径与偏好",
+            "subcategory": "核心功能偏好",
+            "timestamp": "2025-09-08T16:29:05.223689"
+          }
+        ],
+        "用户意图与转化阶段": [
+          {
+            "name": "寻求健身入门建议",
+            "confidence": 1.0,
+            "evidence": "用户询问'应该从什么运动开始比较好？有什么注意事项？'",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T16:29:05.223694"
+          },
+          {
+            "name": "探索阶段",
+            "confidence": 0.8,
+            "evidence": "用户表示'我想开始健身'",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-08T16:29:05.223697"
+          }
+        ],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-08T16:32:26.405910",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "患者",
+            "confidence": 0.9,
+            "evidence": "用户描述自身症状：'最近总是感觉眼睛干涩'",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T16:31:33.714358"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "症状咨询",
+            "confidence": 1.0,
+            "evidence": "用户直接询问：'这是不是干眼症？'",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T16:31:33.714400"
+          },
+          {
+            "name": "信息收集",
+            "confidence": 0.8,
+            "evidence": "用户正在寻求症状确认和建议，表现为询问和描述症状",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-08T16:31:33.714404"
+          }
+        ],
+        "用户商业价值": []
+      }
+    }
+  ]
+}

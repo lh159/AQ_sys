@@ -1,0 +1,230 @@
+{
+  "user_id": "ee1710ef-6238-4287-82d3-ab25b14b15ee",
+  "created_at": "2025-09-08T14:58:22.684347",
+  "last_updated": "2025-09-08T15:07:58.486313",
+  "tag_dimensions": {
+    "用户核心画像": {
+      "年龄段": [
+        {
+          "tag_name": "青年",
+          "confidence": 0.6363636363636362,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-08T15:06:49.492868",
+          "last_reinforced": "2025-09-08T15:06:49.492868",
+          "evidence_list": [
+            "看电脑时间长了"
+          ],
+          "decay_rate": 0.1
+        }
+      ],
+      "性别": [],
+      "所在地区": [],
+      "健康角色": [
+        {
+          "tag_name": "个人健康管理者",
+          "confidence": 0.5884350497986861,
+          "reinforcement_count": 3,
+          "first_seen": "2025-09-08T14:59:56.123503",
+          "last_reinforced": "2025-09-08T15:06:49.492926",
+          "evidence_list": [
+            "用户咨询自身颈椎和腰部不适的缓解方法",
+            "用户说'我想开始健身'，表明为自己咨询健康管理",
+            "最近总是感觉眼睛干涩"
+          ],
+          "decay_rate": 0.1
+        },
+        {
+          "tag_name": "家庭健康决策者",
+          "confidence": 0.6761833208114199,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-08T15:02:12.770461",
+          "last_reinforced": "2025-09-08T15:02:12.770461",
+          "evidence_list": [
+            "作为子女应该怎么关心和帮助她"
+          ],
+          "decay_rate": 0.1
+        }
+      ]
+    },
+    "产品使用路径与偏好": {
+      "核心功能偏好": [
+        {
+          "tag_name": "AI诊断依赖型",
+          "confidence": 0.7272727272727273,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-08T15:06:49.492931",
+          "last_reinforced": "2025-09-08T15:06:49.492931",
+          "evidence_list": [
+            "这是不是干眼症？"
+          ],
+          "decay_rate": 0.1
+        }
+      ],
+      "交互方式偏好": [
+        {
+          "tag_name": "文本交互型",
+          "confidence": 0.6444402704733282,
+          "reinforcement_count": 2,
+          "first_seen": "2025-09-08T14:59:56.123508",
+          "last_reinforced": "2025-09-08T15:06:49.492934",
+          "evidence_list": [
+            "用户通过文本输入描述问题并提问",
+            "用户通过文本输入提问"
+          ],
+          "decay_rate": 0.1
+        }
+      ]
+    },
+    "用户意图与转化阶段": {
+      "具体意图分类": [
+        {
+          "tag_name": "生活方式改善",
+          "confidence": 0.4622556930249238,
+          "reinforcement_count": 3,
+          "first_seen": "2025-09-08T14:59:56.123512",
+          "last_reinforced": "2025-09-08T15:04:26.276696",
+          "evidence_list": [
+            "用户询问缓解方法，如'有什么好的缓解方法？'",
+            "怎么关心和帮助她",
+            "用户询问'应该从什么运动开始比较好？有什么注意事项？'，寻求健身建议"
+          ],
+          "decay_rate": 0.1
+        },
+        {
+          "tag_name": "症状自我评估",
+          "confidence": 0.9090909090909091,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-08T15:06:49.492938",
+          "last_reinforced": "2025-09-08T15:06:49.492938",
+          "evidence_list": [
+            "最近总是感觉眼睛干涩，看电脑时间长了就流泪，这是不是干眼症？"
+          ],
+          "decay_rate": 0.1
+        }
+      ],
+      "转化阶段": [
+        {
+          "tag_name": "问题分析阶段",
+          "confidence": 0.4765831390831391,
+          "reinforcement_count": 3,
+          "first_seen": "2025-09-08T14:59:56.123515",
+          "last_reinforced": "2025-09-08T15:06:49.492941",
+          "evidence_list": [
+            "用户描述症状并寻求缓解方法，类似于使用AI进行初步分析",
+            "询问如何帮助妈妈应对更年期情绪波动",
+            "询问症状可能的原因，寻求诊断"
+          ],
+          "decay_rate": 0.1
+        },
+        {
+          "tag_name": "信息认知阶段",
+          "confidence": 0.6611570247933884,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-08T15:04:26.276700",
+          "last_reinforced": "2025-09-08T15:04:26.276700",
+          "evidence_list": [
+            "用户广泛寻求健康知识，如健身建议"
+          ],
+          "decay_rate": 0.1
+        }
+      ]
+    },
+    "用户商业价值": {
+      "价值等级": [
+        {
+          "tag_name": "高潜力用户",
+          "confidence": 0.6363636363636362,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-08T15:06:49.492944",
+          "last_reinforced": "2025-09-08T15:06:49.492944",
+          "evidence_list": [
+            "使用AI进行症状评估，有转化为付费用户的可能"
+          ],
+          "decay_rate": 0.1
+        }
+      ],
+      "付费敏感度": [],
+      "value_level": [
+        {
+          "tag_name": "低频用户",
+          "confidence": 0.4781094187555493,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-08T14:59:56.123518",
+          "last_reinforced": "2025-09-08T14:59:56.123518",
+          "evidence_list": [
+            "用户在有明确需求时一次性提问，无频率证据"
+          ],
+          "decay_rate": 0.1
+        }
+      ]
+    }
+  },
+  "profile_maturity": 0.7000000000000001,
+  "total_interactions": 4,
+  "dimension_summaries": [
+    {
+      "dimension_name": "用户核心画像",
+      "subdimension_name": "年龄段",
+      "dominant_tag": "青年",
+      "confidence": 0.6363636363636362,
+      "tag_count": 1,
+      "last_updated": "2025-09-08T15:06:49.492868"
+    },
+    {
+      "dimension_name": "用户核心画像",
+      "subdimension_name": "健康角色",
+      "dominant_tag": "家庭健康决策者",
+      "confidence": 0.6761833208114199,
+      "tag_count": 2,
+      "last_updated": "2025-09-08T15:02:12.770461"
+    },
+    {
+      "dimension_name": "产品使用路径与偏好",
+      "subdimension_name": "核心功能偏好",
+      "dominant_tag": "AI诊断依赖型",
+      "confidence": 0.7272727272727273,
+      "tag_count": 1,
+      "last_updated": "2025-09-08T15:06:49.492931"
+    },
+    {
+      "dimension_name": "产品使用路径与偏好",
+      "subdimension_name": "交互方式偏好",
+      "dominant_tag": "文本交互型",
+      "confidence": 0.6444402704733282,
+      "tag_count": 1,
+      "last_updated": "2025-09-08T15:06:49.492934"
+    },
+    {
+      "dimension_name": "用户意图与转化阶段",
+      "subdimension_name": "具体意图分类",
+      "dominant_tag": "症状自我评估",
+      "confidence": 0.9090909090909091,
+      "tag_count": 2,
+      "last_updated": "2025-09-08T15:06:49.492938"
+    },
+    {
+      "dimension_name": "用户意图与转化阶段",
+      "subdimension_name": "转化阶段",
+      "dominant_tag": "信息认知阶段",
+      "confidence": 0.6611570247933884,
+      "tag_count": 2,
+      "last_updated": "2025-09-08T15:04:26.276700"
+    },
+    {
+      "dimension_name": "用户商业价值",
+      "subdimension_name": "价值等级",
+      "dominant_tag": "高潜力用户",
+      "confidence": 0.6363636363636362,
+      "tag_count": 1,
+      "last_updated": "2025-09-08T15:06:49.492944"
+    },
+    {
+      "dimension_name": "用户商业价值",
+      "subdimension_name": "value_level",
+      "dominant_tag": "低频用户",
+      "confidence": 0.4781094187555493,
+      "tag_count": 1,
+      "last_updated": "2025-09-08T14:59:56.123518"
+    }
+  ]
+}

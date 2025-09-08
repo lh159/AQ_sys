@@ -12,7 +12,10 @@ import sys
 import os
 
 # 添加项目根目录到Python路径
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, project_root)
+print(f"📂 项目根目录: {project_root}")
+print(f"🔍 Python路径: {sys.path[:3]}")  # 只显示前3个路径
 
 from app.core.tag_extractor import TagExtractor
 from app.core.tag_manager import TagManager
@@ -157,6 +160,11 @@ def upload_file():
         print(f"📊 解析状态: {parse_status}")
         print(f"✅ 有效对话数: {len(valid_conversations)}")
         
+        # 保存文件内容到会话中，以便后续分析使用
+        session['uploaded_file_content'] = content
+        session['uploaded_file_name'] = file.filename
+        session['valid_conversations'] = valid_conversations
+        
         # 返回解析结果，等待用户确认
         return jsonify({
             "success": True,
@@ -187,16 +195,22 @@ def analyze_file():
             }), 400
         
         user_id = session['user_id']
-        data = request.json
+        data = request.json or {}
         
-        # 重新解析文件内容（从前端传递）
+        # 尝试从前端传递的数据获取文件内容
         file_content = data.get('file_content', '')
-        file_name = data.get('file_name', 'unknown.txt')
+        file_name = data.get('file_name', '')
+        
+        # 如果前端没有传递，尝试从会话中获取
+        if not file_content and 'uploaded_file_content' in session:
+            file_content = session['uploaded_file_content']
+            file_name = session.get('uploaded_file_name', 'unknown.txt')
+            print("📋 使用会话中保存的文件内容")
         
         if not file_content:
             return jsonify({
                 "success": False,
-                "error": "文件内容为空"
+                "error": "文件内容为空，请先上传文件"
             }), 400
         
         # 解析对话
@@ -226,7 +240,14 @@ def analyze_file():
         print(f"🔧 初始化分析器...")
         tag_extractor = TagExtractor(user_id)
         tag_manager = TagManager(user_id)
-        batch_analyzer = BatchAnalyzer(tag_extractor, tag_manager)
+        batch_analyzer = BatchAnalyzer(tag_extractor, tag_manager, user_id)
+        
+        # 检查是否需要生成摘要
+        generate_summaries = data.get('generate_summaries', True)  # 默认生成摘要
+        print(f"📝 生成摘要: {'是' if generate_summaries else '否'}")
+        
+        # 使用整体分析模式
+        print(f"🔧 分析模式: 整体分析")
         
         # 执行批量分析
         print(f"🚀 开始批量分析 {len(valid_conversations)} 轮对话...")
@@ -234,7 +255,8 @@ def analyze_file():
         try:
             analysis_result = batch_analyzer.analyze_conversations(
                 user_id=user_id,
-                conversations=valid_conversations
+                conversations=valid_conversations,
+                generate_summaries=generate_summaries
             )
             
             print(f"✅ 批量分析完成!")
@@ -260,6 +282,42 @@ def analyze_file():
         return jsonify({
             "success": False,
             "error": f"批量分析失败: {str(e)}"
+        }), 500
+
+@app.route('/api/conversation_summaries', methods=['GET'])
+def get_conversation_summaries():
+    """获取最近分析的对话摘要"""
+    try:
+        # 检查用户会话
+        if 'user_id' not in session:
+            return jsonify({
+                "success": False,
+                "error": "用户会话未初始化"
+            }), 400
+        
+        user_id = session['user_id']
+        
+        # 使用摘要管理器获取摘要数据
+        from app.core.summary_manager import SummaryManager
+        summary_manager = SummaryManager(user_id)
+        
+        # 获取最近20个摘要
+        limit = request.args.get('limit', 20, type=int)
+        summaries = summary_manager.get_summaries(limit=limit)
+        summary_stats = summary_manager.get_summary_stats()
+        
+        return jsonify({
+            "success": True,
+            "message": "对话摘要获取成功",
+            "summaries": summaries,
+            "stats": summary_stats
+        })
+        
+    except Exception as e:
+        print(f"❌ 获取对话摘要失败: {str(e)}")
+        return jsonify({
+            "success": False,
+            "error": f"获取对话摘要失败: {str(e)}"
         }), 500
 
 @app.route('/api/analysis_progress', methods=['GET'])

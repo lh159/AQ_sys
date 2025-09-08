@@ -20,7 +20,7 @@
 
         .container {
             display: flex;
-            height: 100vh;
+            min-height: 100vh;
             gap: 15px;
             padding: 15px;
         }
@@ -59,6 +59,8 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            overflow-y: auto;
+            max-height: calc(100vh - 200px);
         }
 
         .upload-zone {
@@ -206,14 +208,16 @@
             margin-top: 10px;
         }
 
-        .results-section {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            margin-top: 20px;
-            display: none;
-            border: 1px solid #e9ecef;
-        }
+         .results-section {
+             background: white;
+             border-radius: 12px;
+             padding: 20px;
+             margin-top: 20px;
+             display: none;
+             border: 1px solid #e9ecef;
+             max-height: 400px;
+             overflow-y: auto;
+         }
 
         .results-header {
             font-size: 18px;
@@ -254,6 +258,7 @@
             flex: 1;
             padding: 20px;
             overflow-y: auto;
+            max-height: calc(100vh - 160px);
         }
 
         .profile-stats {
@@ -587,6 +592,31 @@
                     
                     // 刷新用户画像显示
                     refreshProfile();
+                    
+                    // 显示详细的对话摘要
+                    if (analysis.conversation_summaries && analysis.conversation_summaries.length > 0) {
+                        console.log('显示对话摘要，数据:', analysis.conversation_summaries);
+                        displayConversationSummaries(analysis.conversation_summaries);
+                    } else {
+                        console.log('没有对话摘要数据或数据为空:', analysis.conversation_summaries);
+                        // 尝试从API获取摘要数据
+                        loadConversationSummaries();
+                    }
+
+                    // 显示对话摘要统计
+                    if (analysis.summary_statistics) {
+                        const summaryStats = analysis.summary_statistics;
+                        showResult(`📝 对话摘要统计：`, 'info');
+                        showResult(`• 摘要生成成功率：${summaryStats.success_rate}%`, 'info');
+                        
+                        if (summaryStats.medical_systems && Object.keys(summaryStats.medical_systems).length > 0) {
+                            showResult(`• 涉及医疗系统：${Object.keys(summaryStats.medical_systems).join(', ')}`, 'info');
+                        }
+                        
+                        if (summaryStats.risk_levels && Object.keys(summaryStats.risk_levels).length > 0) {
+                            showResult(`• 风险等级分布：${Object.entries(summaryStats.risk_levels).map(([level, count]) => `${level}(${count})`).join(', ')}`, 'info');
+                        }
+                    }
 
                     // 显示分析摘要
                     if (analysis.summary) {
@@ -657,6 +687,128 @@
             
             // 滚动到最新结果
             resultsContent.scrollTop = resultsContent.scrollHeight;
+        }
+
+        // 显示对话摘要详情
+        function displayConversationSummaries(summaries) {
+            const resultsContent = document.getElementById('resultsContent');
+            
+            // 创建摘要展示区域
+            const summarySection = document.createElement('div');
+            summarySection.className = 'summary-section';
+            summarySection.style.cssText = `
+                margin: 20px 0;
+                border: 1px solid #e0e0e0;
+                border-radius: 8px;
+                background: #f9f9f9;
+            `;
+            
+            summarySection.innerHTML = `
+                <div class="summary-header" style="
+                    padding: 15px;
+                    background: #667eea;
+                    color: white;
+                    border-radius: 8px 8px 0 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                ">
+                    <h3 style="margin: 0;">📋 对话摘要报告</h3>
+                    <button onclick="toggleSummaryDetails(this)" style="
+                        background: rgba(255,255,255,0.2);
+                        color: white;
+                        border: none;
+                        padding: 5px 10px;
+                        border-radius: 4px;
+                        cursor: pointer;
+                    ">展开详情</button>
+                </div>
+                <div class="summary-details" style="display: none; padding: 15px;">
+                </div>
+            `;
+            
+            const summaryDetails = summarySection.querySelector('.summary-details');
+            
+            summaries.forEach((summaryResult, index) => {
+                if (summaryResult.success && summaryResult.summary) {
+                    const summary = summaryResult.summary;
+                    const summaryItem = document.createElement('div');
+                    summaryItem.style.cssText = `
+                        margin-bottom: 15px;
+                        padding: 15px;
+                        border: 1px solid #ddd;
+                        border-radius: 6px;
+                        background: white;
+                    `;
+                    
+                    const riskClass = getRiskLevel(summary['风险评估']);
+                    const riskColor = {
+                        'high': '#dc3545',
+                        'medium': '#ffc107',
+                        'low': '#28a745',
+                        'unknown': '#6c757d'
+                    }[riskClass] || '#6c757d';
+                    
+                    summaryItem.innerHTML = `
+                        <div style="font-weight: bold; color: #667eea; margin-bottom: 10px;">
+                            对话 ${summaryResult.conversation_index || index + 1}
+                        </div>
+                        <div style="line-height: 1.6;">
+                            <div style="margin-bottom: 8px;"><strong>主要问题：</strong>${summary['主要问题'] || 'N/A'}</div>
+                            <div style="margin-bottom: 8px;"><strong>涉及系统：</strong>${summary['涉及系统'] || 'N/A'}</div>
+                            <div style="margin-bottom: 8px;"><strong>风险评估：</strong><span style="color: ${riskColor}; font-weight: bold;">${summary['风险评估'] || 'N/A'}</span></div>
+                            <div style="margin-bottom: 8px;"><strong>关键症状：</strong>${Array.isArray(summary['关键症状']) ? summary['关键症状'].join(', ') : (summary['关键症状'] || 'N/A')}</div>
+                            <div style="margin-bottom: 8px;"><strong>建议要点：</strong>${Array.isArray(summary['建议要点']) ? summary['建议要点'].join('; ') : (summary['建议要点'] || 'N/A')}</div>
+                            <div style="margin-bottom: 8px;"><strong>后续行动：</strong>${summary['后续行动'] || 'N/A'}</div>
+                            <div style="margin-bottom: 8px;"><strong>专业摘要：</strong><em>${summary['专业摘要'] || 'N/A'}</em></div>
+                        </div>
+                    `;
+                    summaryDetails.appendChild(summaryItem);
+                } else {
+                    const errorItem = document.createElement('div');
+                    errorItem.style.cssText = `
+                        margin-bottom: 15px;
+                        padding: 15px;
+                        border: 1px solid #dc3545;
+                        border-radius: 6px;
+                        background: #f8d7da;
+                        color: #721c24;
+                    `;
+                    errorItem.innerHTML = `
+                        <div style="font-weight: bold; margin-bottom: 10px;">
+                            对话 ${summaryResult.conversation_index || index + 1} - 摘要生成失败
+                        </div>
+                        <div>${summaryResult.error || '未知错误'}</div>
+                    `;
+                    summaryDetails.appendChild(errorItem);
+                }
+            });
+            
+            resultsContent.appendChild(summarySection);
+            resultsContent.scrollTop = resultsContent.scrollHeight;
+        }
+        
+        // 获取风险等级的CSS类
+        function getRiskLevel(risk) {
+            if (!risk) return 'unknown';
+            const lowerRisk = risk.toLowerCase();
+            if (lowerRisk.includes('高风险') || lowerRisk.includes('紧急')) return 'high';
+            if (lowerRisk.includes('中风险')) return 'medium';
+            if (lowerRisk.includes('低风险')) return 'low';
+            return 'unknown';
+        }
+        
+        // 切换摘要详情显示
+        function toggleSummaryDetails(button) {
+            const details = button.parentElement.nextElementSibling;
+            
+            if (details.style.display === 'none') {
+                details.style.display = 'block';
+                button.textContent = '收起详情';
+            } else {
+                details.style.display = 'none';
+                button.textContent = '展开详情';
+            }
         }
 
         // 显示上传进度
@@ -867,6 +1019,38 @@
                     }
                 }
             });
+        }
+
+        // 加载对话摘要
+        async function loadConversationSummaries() {
+            try {
+                const response = await fetch('/api/conversation_summaries', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                const result = await response.json();
+                console.log('摘要API响应:', result);
+                
+                if (result.success && result.summaries && result.summaries.length > 0) {
+                    // 转换数据格式以适配前端显示
+                    const formattedSummaries = result.summaries.map((summaryData, index) => ({
+                        conversation_index: index + 1,
+                        success: summaryData.success,
+                        summary: summaryData.summary,
+                        error: summaryData.error
+                    }));
+                    
+                    displayConversationSummaries(formattedSummaries);
+                    showResult(`📋 已加载 ${result.summaries.length} 个对话摘要`, 'success');
+                } else {
+                    console.log('没有摘要数据可显示');
+                }
+            } catch (error) {
+                console.error('加载对话摘要失败:', error);
+            }
         }
 
         // 页面加载完成后的初始化

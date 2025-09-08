@@ -1,0 +1,175 @@
+{
+  "user_id": "fa03aff2-f244-4c54-94f6-0f3b98f2704d",
+  "tag_events": [
+    {
+      "timestamp": "2025-09-08T15:56:16.933109",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "个人健康管理者",
+            "confidence": 0.9,
+            "evidence": "用户说'我是一名程序员'，并在为自己咨询颈椎和腰部不适的缓解方法",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T15:55:28.398289"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "生活方式改善",
+            "confidence": 0.9,
+            "evidence": "用户问'有什么好的缓解方法？'，寻求改善工作习惯和运动的建议",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T15:55:28.398328"
+          },
+          {
+            "name": "问题分析阶段",
+            "confidence": 0.7,
+            "evidence": "用户描述症状并询问缓解方法，表明正在使用AI进行健康问题分析",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-08T15:55:28.398332"
+          }
+        ],
+        "用户商业价值": [
+          {
+            "name": "低频用户",
+            "confidence": 0.6,
+            "evidence": "用户仅进行一次咨询，没有证据表明频繁使用",
+            "category": "用户商业价值",
+            "subcategory": "价值等级",
+            "timestamp": "2025-09-08T15:55:28.398336"
+          }
+        ]
+      }
+    },
+    {
+      "timestamp": "2025-09-08T15:57:58.455373",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "家庭健康决策者",
+            "confidence": 0.9,
+            "evidence": "用户提到'我妈妈55岁'和'作为子女应该怎么关心和帮助她'，表明用户在为家人咨询健康问题",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T15:57:20.304186"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "生活方式改善",
+            "confidence": 0.8,
+            "evidence": "用户询问'作为子女应该怎么关心和帮助她'，焦点在于情绪管理、饮食和运动等生活方式的建议",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T15:57:20.304210"
+          },
+          {
+            "name": "信息认知阶段",
+            "confidence": 0.7,
+            "evidence": "用户寻求关于更年期护理的一般性建议，表明处于信息获取和认知阶段",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-08T15:57:20.304214"
+          }
+        ],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-08T15:59:56.788431",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "青年 (18-40岁)",
+            "confidence": 0.9,
+            "evidence": "我想开始健身",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-08T15:59:04.082387"
+          },
+          {
+            "name": "个人健康管理者",
+            "confidence": 1.0,
+            "evidence": "我想开始健身",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T15:59:04.082404"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "生活方式改善",
+            "confidence": 0.8,
+            "evidence": "应该从什么运动开始比较好？有什么注意事项？",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T15:59:04.082413"
+          }
+        ],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-08T16:02:16.917818",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "个人健康管理者",
+            "confidence": 1.0,
+            "evidence": "用户描述自己的症状'感觉眼睛干涩'",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T16:01:25.958225"
+          }
+        ],
+        "产品使用路径与偏好": [
+          {
+            "name": "AI诊断依赖型",
+            "confidence": 0.9,
+            "evidence": "用户询问'这是不是干眼症？'，依赖AI进行初步诊断",
+            "category": "产品使用路径与偏好",
+            "subcategory": "核心功能偏好",
+            "timestamp": "2025-09-08T16:01:25.958256"
+          },
+          {
+            "name": "文本交互型",
+            "confidence": 1.0,
+            "evidence": "用户通过文本输入进行查询",
+            "category": "产品使用路径与偏好",
+            "subcategory": "交互方式偏好",
+            "timestamp": "2025-09-08T16:01:25.958263"
+          }
+        ],
+        "用户意图与转化阶段": [
+          {
+            "name": "症状自我评估",
+            "confidence": 1.0,
+            "evidence": "用户描述症状并询问'这是不是干眼症？'",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T16:01:25.958271"
+          },
+          {
+            "name": "问题分析阶段",
+            "confidence": 0.9,
+            "evidence": "用户使用AI诊室功能分析具体健康问题",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-08T16:01:25.958278"
+          }
+        ],
+        "用户商业价值": []
+      }
+    }
+  ]
+}

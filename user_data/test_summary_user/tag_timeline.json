@@ -1,0 +1,109 @@
+{
+  "user_id": "test_summary_user",
+  "tag_events": [
+    {
+      "timestamp": "2025-09-08T15:49:03.409378",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "青年 (18-40岁)",
+            "confidence": 1.0,
+            "evidence": "用户自称25岁",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-08T15:48:12.697890"
+          },
+          {
+            "name": "女",
+            "confidence": 1.0,
+            "evidence": "用户自称女性",
+            "category": "用户核心画像",
+            "subcategory": "性别",
+            "timestamp": "2025-09-08T15:48:12.697927"
+          },
+          {
+            "name": "个人健康管理者",
+            "confidence": 0.9,
+            "evidence": "用户咨询自身月经不规律问题",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T15:48:12.697943"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "症状自我评估",
+            "confidence": 1.0,
+            "evidence": "用户问'是不是有什么问题'",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T15:48:12.697948"
+          },
+          {
+            "name": "问题分析阶段",
+            "confidence": 0.8,
+            "evidence": "用户描述症状并寻求可能原因",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-08T15:48:12.697951"
+          }
+        ],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-08T15:51:05.865785",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "青年",
+            "confidence": 0.6,
+            "evidence": "月经不规律问题通常与生殖健康相关，常见于青年女性",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-08T15:50:13.483963"
+          },
+          {
+            "name": "女",
+            "confidence": 1.0,
+            "evidence": "用户提到'月经'，这是女性特有的生理现象",
+            "category": "用户核心画像",
+            "subcategory": "性别",
+            "timestamp": "2025-09-08T15:50:13.483982"
+          },
+          {
+            "name": "个人健康管理者",
+            "confidence": 0.9,
+            "evidence": "用户直接咨询自己的健康问题'月经不规律，周期变长了'",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T15:50:13.483985"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "症状自我评估",
+            "confidence": 1.0,
+            "evidence": "用户问'是不是有什么问题？'，寻求对症状的评估",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T15:50:13.483989"
+          },
+          {
+            "name": "问题分析阶段",
+            "confidence": 0.8,
+            "evidence": "用户使用助手进行健康问题分析，助手回应建议记录和检查",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-08T15:50:13.483992"
+          }
+        ],
+        "用户商业价值": []
+      }
+    }
+  ]
+}

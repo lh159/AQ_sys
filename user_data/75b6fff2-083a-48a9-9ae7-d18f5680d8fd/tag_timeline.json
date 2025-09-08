@@ -1,0 +1,222 @@
+{
+  "user_id": "75b6fff2-083a-48a9-9ae7-d18f5680d8fd",
+  "tag_events": [
+    {
+      "timestamp": "2025-09-08T09:42:56.871864",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "青年 (18-40岁)",
+            "confidence": 0.9,
+            "evidence": "我是一名程序员，长期坐在电脑前工作",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-08T09:42:56.869958"
+          },
+          {
+            "name": "个人健康管理者",
+            "confidence": 1.0,
+            "evidence": "用户为自己咨询颈椎和腰部不适问题",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T09:42:56.869991"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "症状自我评估",
+            "confidence": 0.7,
+            "evidence": "最近颈椎和腰部都很不舒服，有什么好的缓解方法？",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T09:42:56.869997"
+          },
+          {
+            "name": "生活方式改善",
+            "confidence": 0.8,
+            "evidence": "有什么好的缓解方法？寻求改善工作生活方式建议",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T09:42:56.870000"
+          },
+          {
+            "name": "问题分析阶段",
+            "confidence": 0.8,
+            "evidence": "咨询具体健康问题并寻求解决方案",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-08T09:42:56.870003"
+          }
+        ],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-08T09:43:14.703625",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "中年 (41-65岁)",
+            "confidence": 0.9,
+            "evidence": "我妈妈55岁",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-08T09:43:14.701294"
+          },
+          {
+            "name": "女",
+            "confidence": 1.0,
+            "evidence": "我妈妈55岁，最近开始进入更年期",
+            "category": "用户核心画像",
+            "subcategory": "性别",
+            "timestamp": "2025-09-08T09:43:14.701324"
+          },
+          {
+            "name": "家庭健康决策者",
+            "confidence": 0.9,
+            "evidence": "作为子女应该怎么关心和帮助她？",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T09:43:14.701328"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "生活方式改善",
+            "confidence": 0.8,
+            "evidence": "作为子女应该怎么关心和帮助她？",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T09:43:14.701332"
+          },
+          {
+            "name": "信息认知阶段",
+            "confidence": 0.7,
+            "evidence": "询问如何关心和帮助更年期母亲，寻求健康知识",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-08T09:43:14.701335"
+          }
+        ],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-08T09:43:34.714787",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "青年 (18-40岁)",
+            "confidence": 0.7,
+            "evidence": "用户询问健身相关内容，关注运动开始和注意事项，符合青年群体对运动健身的关注点",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-08T09:43:34.712409"
+          },
+          {
+            "name": "个人健康管理者",
+            "confidence": 0.9,
+            "evidence": "用户主动咨询个人健身计划，表明为自己进行健康管理",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T09:43:34.712435"
+          },
+          {
+            "name": "健康生活追求者",
+            "confidence": 0.8,
+            "evidence": "用户表达想开始健身，关注运动方式和注意事项，体现对健康生活方式的追求",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T09:43:34.712439"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "生活方式改善",
+            "confidence": 0.9,
+            "evidence": "用户询问'应该从什么运动开始比较好？有什么注意事项？'，明确表达改善生活方式的需求",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T09:43:34.712444"
+          },
+          {
+            "name": "信息认知阶段",
+            "confidence": 0.8,
+            "evidence": "用户表示'完全没有经验'，正在寻求基础健身信息，处于广泛了解阶段",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-08T09:43:34.712446"
+          }
+        ],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-08T09:43:57.156530",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "青年 (18-40岁)",
+            "confidence": 0.7,
+            "evidence": "用户描述长时间使用电脑的症状，这与青年人群常见的工作场景相符",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-08T09:43:57.153253"
+          },
+          {
+            "name": "个人健康管理者",
+            "confidence": 0.9,
+            "evidence": "用户主动咨询自身眼睛干涩的症状，为自己进行健康管理",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T09:43:57.153282"
+          }
+        ],
+        "产品使用路径与偏好": [
+          {
+            "name": "AI诊断依赖型",
+            "confidence": 0.8,
+            "evidence": "用户直接向AI助手询问症状诊断（\"这是不是干眼症？\"），依赖AI进行初步判断",
+            "category": "产品使用路径与偏好",
+            "subcategory": "核心功能偏好",
+            "timestamp": "2025-09-08T09:43:57.153288"
+          },
+          {
+            "name": "文本交互型",
+            "confidence": 0.9,
+            "evidence": "通过文字描述症状进行查询，未使用语音或图像功能",
+            "category": "产品使用路径与偏好",
+            "subcategory": "交互方式偏好",
+            "timestamp": "2025-09-08T09:43:57.153294"
+          }
+        ],
+        "用户意图与转化阶段": [
+          {
+            "name": "症状自我评估",
+            "confidence": 0.9,
+            "evidence": "用户描述具体症状（\"眼睛干涩，看电脑时间长了就流泪\"）并询问可能病因",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T09:43:57.153298"
+          },
+          {
+            "name": "问题分析阶段",
+            "confidence": 0.8,
+            "evidence": "使用AI诊室功能分析具体的眼睛干涩问题，寻求初步诊断",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-08T09:43:57.153302"
+          }
+        ],
+        "用户商业价值": []
+      }
+    }
+  ]
+}

@@ -6,8 +6,8 @@ app:
 
 llm:
   provider: "deepseek"
-  model: "deepseek-chat"
-  api_key: "sk-82ef8a72fca243c68624ed2c909ae906"  # 真实的deepseek api key
+  model: "deepseek-reasoner"
+  api_key: "sk-dda1273e7fe940478167bc1629cec0d4"  # DeepSeek API key
   base_url: "https://api.deepseek.com"
   max_tokens: 1000
   temperature: 0.3

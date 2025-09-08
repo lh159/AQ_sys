@@ -1,0 +1,49 @@
+{
+  "user_id": "3e4675c0-387c-42d1-8575-1e2e56fe3b01",
+  "tag_events": [
+    {
+      "timestamp": "2025-09-08T16:20:26.105039",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "女性",
+            "confidence": 1.0,
+            "evidence": "用户提及'月经不太规律'",
+            "category": "用户核心画像",
+            "subcategory": "性别",
+            "timestamp": "2025-09-08T16:19:30.159989"
+          },
+          {
+            "name": "患者",
+            "confidence": 0.9,
+            "evidence": "用户使用称呼'医生您好'",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T16:19:30.160019"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "症状报告",
+            "confidence": 1.0,
+            "evidence": "用户描述'月经不太规律，以前都是28天左右，现在经常延后一周以上才来'",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T16:19:30.160025"
+          },
+          {
+            "name": "信息提供",
+            "confidence": 0.8,
+            "evidence": "用户报告症状后，助手询问年龄、压力等因素，表明处于信息收集阶段",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-08T16:19:30.160028"
+          }
+        ],
+        "用户商业价值": []
+      }
+    }
+  ]
+}

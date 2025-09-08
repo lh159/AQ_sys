@@ -1,0 +1,193 @@
+{
+  "user_id": "1f90efa8-9edd-49a1-b706-b14782cf8eef",
+  "tag_events": [
+    {
+      "timestamp": "2025-09-08T16:39:27.845267",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "成年",
+            "confidence": 0.6,
+            "evidence": "白天工作的时候",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-08T16:38:40.361602"
+          },
+          {
+            "name": "患者",
+            "confidence": 1.0,
+            "evidence": "我最近总是失眠",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T16:38:40.361631"
+          }
+        ],
+        "产品使用路径与偏好": [
+          {
+            "name": "健康咨询",
+            "confidence": 0.9,
+            "evidence": "用户与助手讨论失眠问题并寻求建议",
+            "category": "产品使用路径与偏好",
+            "subcategory": "核心功能偏好",
+            "timestamp": "2025-09-08T16:38:40.361637"
+          }
+        ],
+        "用户意图与转化阶段": [
+          {
+            "name": "寻求健康建议",
+            "confidence": 0.9,
+            "evidence": "用户描述失眠症状并等待助手回应",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T16:38:40.361641"
+          },
+          {
+            "name": "问题识别",
+            "confidence": 0.8,
+            "evidence": "用户主动报告健康问题",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-08T16:38:40.361644"
+          }
+        ],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-08T16:42:00.202497",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "30-40岁",
+            "confidence": 1.0,
+            "evidence": "用户说：'我是一个30岁的上班族'",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-08T16:40:43.674056"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-08T16:44:43.686430",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "成人",
+            "confidence": 0.8,
+            "evidence": "孩子发烧了",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-08T16:43:37.855896"
+          },
+          {
+            "name": "照顾者",
+            "confidence": 0.9,
+            "evidence": "孩子发烧了",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T16:43:37.855916"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "医疗咨询",
+            "confidence": 1.0,
+            "evidence": "应该怎么处理？需要立即去医院吗？",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T16:43:37.855925"
+          },
+          {
+            "name": "信息收集",
+            "confidence": 0.8,
+            "evidence": "用户询问处理方法和是否需要就医",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-08T16:43:37.855931"
+          }
+        ],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-08T16:47:38.155838",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "饮食咨询",
+            "confidence": 1.0,
+            "evidence": "用户说：'我想了解一下高血压的饮食注意事项，平时应该吃什么不应该吃什么？'",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T16:46:30.732546"
+          },
+          {
+            "name": "了解阶段",
+            "confidence": 0.8,
+            "evidence": "用户表达想了解高血压饮食注意事项，表明处于信息收集的早期阶段",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-08T16:46:30.732569"
+          }
+        ],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-08T16:50:25.826246",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "患者",
+            "confidence": 0.9,
+            "evidence": "用户描述自身虚寒体质症状：'我体质比较虚寒，冬天特别怕冷，手脚经常冰凉'",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T16:49:24.478149"
+          }
+        ],
+        "产品使用路径与偏好": [
+          {
+            "name": "对话交互",
+            "confidence": 0.9,
+            "evidence": "用户通过对话消息咨询健康问题：'我体质比较虚寒...有什么调理方法吗？'",
+            "category": "产品使用路径与偏好",
+            "subcategory": "交互方式偏好",
+            "timestamp": "2025-09-08T16:49:24.478170"
+          }
+        ],
+        "用户意图与转化阶段": [
+          {
+            "name": "健康咨询",
+            "confidence": 0.9,
+            "evidence": "用户直接询问调理方法：'有什么调理方法吗？'",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T16:49:24.478174"
+          },
+          {
+            "name": "信息寻求阶段",
+            "confidence": 0.8,
+            "evidence": "用户寻求调理方法，表明处于信息收集和探索选项阶段：'有什么调理方法吗？'",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-08T16:49:24.478177"
+          }
+        ],
+        "用户商业价值": []
+      }
+    }
+  ]
+}

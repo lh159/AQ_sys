@@ -1,0 +1,57 @@
+{
+  "user_id": "8b792920-cc1a-40d7-9f09-3a6432fc83de",
+  "tag_events": [
+    {
+      "timestamp": "2025-09-08T17:09:35.868272",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "25-34",
+            "confidence": 0.7,
+            "evidence": "用户是程序员，长期坐电脑前工作；妈妈55岁，用户作为子女",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-08T17:05:42.024378"
+          },
+          {
+            "name": "患者",
+            "confidence": 0.9,
+            "evidence": "颈椎和腰部很不舒服；眼睛干涩",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T17:05:42.024442"
+          },
+          {
+            "name": "家属",
+            "confidence": 0.9,
+            "evidence": "我妈妈55岁，作为子女应该怎么关心和帮助她",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T17:05:42.024447"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "健康咨询",
+            "confidence": 1.0,
+            "evidence": "所有对话都是寻求健康建议的提问，包括缓解方法、关心方式、运动开始、症状确认",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T17:05:42.024452"
+          },
+          {
+            "name": "信息收集",
+            "confidence": 0.8,
+            "evidence": "用户询问缓解方法、关心方式、运动开始、症状确认，但没有表示立即行动或购买",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-08T17:05:42.024455"
+          }
+        ],
+        "用户商业价值": []
+      }
+    }
+  ]
+}
