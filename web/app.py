@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-AQ-用户标签系统 Flask Web应用
+AQ-用户标签系统 Flask Web应用 - 文件上传分析版本
 """
 
 from flask import Flask, render_template, request, jsonify, session
@@ -28,91 +28,6 @@ def index():
     """主页"""
     return render_template('index.html')
 
-@app.route('/api/chat', methods=['POST'])
-def chat():
-    """聊天接口 - 核心标签提取与画像更新接口"""
-    try:
-        data = request.json
-        user_message = data.get('message', '').strip()
-        
-        if not user_message:
-            return jsonify({
-                "success": False,
-                "error": "消息内容不能为空"
-            }), 400
-        
-        # 获取或创建用户ID
-        if 'user_id' not in session:
-            session['user_id'] = str(uuid.uuid4())
-            print(f"🆔 创建新用户会话: {session['user_id']}")
-        
-        user_id = session['user_id']
-        
-        # 初始化核心组件
-        tag_extractor = TagExtractor(user_id)
-        tag_manager = TagManager(user_id)
-        
-        print(f"🔍 分析用户消息: {user_message[:50]}...")
-        
-        # 1. 提取标签
-        extracted_tags = tag_extractor.extract_tags_from_text(user_message)
-        
-        # 2. 更新用户画像
-        updated_profile = tag_manager.update_tags(extracted_tags)
-        
-        # 3. 构建响应数据
-        response_data = {
-            "success": True,
-            "message": "分析完成",
-            "user_id": user_id,
-            "newly_extracted_tags": {
-                category: [
-                    {
-                        "name": tag.name,
-                        "confidence": tag.confidence,
-                        "evidence": tag.evidence,
-                        "subcategory": tag.subcategory
-                    }
-                    for tag in tags
-                ]
-                for category, tags in extracted_tags.items()
-            },
-            "updated_user_profile": {
-                "user_id": updated_profile.user_id,
-                "profile_maturity": updated_profile.profile_maturity,
-                "total_interactions": updated_profile.total_interactions,
-                "last_updated": updated_profile.last_updated,
-                "dimension_summaries": [
-                    {
-                        "dimension_name": summary.dimension_name,
-                        "subdimension_name": summary.subdimension_name,
-                        "dominant_tag": summary.dominant_tag,
-                        "confidence": summary.confidence,
-                        "tag_count": summary.tag_count
-                    }
-                    for summary in updated_profile.dimension_summaries
-                ]
-            }
-        }
-        
-        # 记录对话日志
-        conversation_log = {
-            "timestamp": datetime.now().isoformat(),
-            "user_message": user_message,
-            "extracted_tags_count": sum(len(tags) for tags in extracted_tags.values()),
-            "profile_maturity": updated_profile.profile_maturity
-        }
-        
-        print(f"✅ 处理完成，提取了 {conversation_log['extracted_tags_count']} 个标签")
-        
-        return jsonify(response_data)
-        
-    except Exception as e:
-        print(f"❌ 处理聊天请求时出错: {str(e)}")
-        return jsonify({
-            "success": False,
-            "error": f"处理请求时出错: {str(e)}"
-        }), 500
 
 @app.route('/api/profile', methods=['GET'])
 def get_profile():
@@ -174,7 +89,7 @@ def reset_user():
     
     return jsonify({
         "success": True,
-        "message": "用户会话已重置，下次对话将创建新的用户画像"
+        "message": "用户会话已重置，下次分析将创建新的用户画像"
     })
 
 @app.route('/api/upload_file', methods=['POST'])
@@ -430,5 +345,5 @@ def internal_error(error):
     }), 500
 
 if __name__ == '__main__':
-    print("🚀 启动 AQ-用户标签系统...")
+    print("🚀 启动 AQ-用户标签系统（文件上传分析版本）...")
     app.run(debug=True, host='127.0.0.1', port=8080)

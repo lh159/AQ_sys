@@ -1,0 +1,292 @@
+{
+  "user_id": "3553a265-2713-432b-a4f5-62fe9ea028ef",
+  "tag_events": [
+    {
+      "timestamp": "2025-09-08T09:22:09.759590",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-08T09:22:28.882820",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "青年 (18-40岁)",
+            "confidence": 0.7,
+            "evidence": "用户提到'白天工作的时候又很困很疲惫'，表明处于工作年龄段",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-08T09:22:28.880883"
+          },
+          {
+            "name": "个人健康管理者",
+            "confidence": 0.9,
+            "evidence": "用户描述'我最近总是失眠'，明确为自己咨询健康问题",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T09:22:28.880918"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "症状自我评估",
+            "confidence": 0.8,
+            "evidence": "用户描述'我最近总是失眠，晚上躺在床上翻来覆去睡不着，白天工作的时候又很困很疲惫'，属于症状描述和初步评估",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T09:22:28.880924"
+          },
+          {
+            "name": "生活方式改善",
+            "confidence": 0.6,
+            "evidence": "用户主动提及失眠问题，隐含寻求改善生活方式的建议",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T09:22:28.880928"
+          },
+          {
+            "name": "问题分析阶段",
+            "confidence": 0.7,
+            "evidence": "用户正在描述具体健康问题（失眠）并寻求分析和建议",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-08T09:22:28.880931"
+          }
+        ],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-08T09:22:45.319406",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "青年 (18-40岁)",
+            "confidence": 1.0,
+            "evidence": "用户明确表示'我是一个30岁的上班族'",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-08T09:22:45.317866"
+          },
+          {
+            "name": "个人健康管理者",
+            "confidence": 0.9,
+            "evidence": "用户描述自己的工作压力和加班情况，表明是为自己咨询健康问题",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T09:22:45.317889"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "生活方式改善",
+            "confidence": 0.8,
+            "evidence": "用户提到'工作压力比较大，经常加班到很晚'，寻求压力管理和健康生活方式的建议",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T09:22:45.317894"
+          },
+          {
+            "name": "信息认知阶段",
+            "confidence": 0.7,
+            "evidence": "用户描述自身情况并寻求建议，处于健康信息获取和认知阶段",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-08T09:22:45.317897"
+          }
+        ],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-08T09:23:06.860225",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "婴幼儿 (0-3岁)",
+            "confidence": 0.7,
+            "evidence": "用户询问'孩子发烧了'，婴幼儿阶段常见发烧问题",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-08T09:23:06.857129"
+          },
+          {
+            "name": "儿童 (4-11岁)",
+            "confidence": 0.6,
+            "evidence": "用户询问'孩子发烧了'，儿童阶段也常见发烧问题",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-08T09:23:06.857158"
+          },
+          {
+            "name": "家庭健康决策者",
+            "confidence": 0.9,
+            "evidence": "用户为孩子咨询发烧处理方式，'孩子发烧了，体温38.5度，应该怎么处理？'",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T09:23:06.857166"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "症状自我评估",
+            "confidence": 0.8,
+            "evidence": "用户询问'孩子发烧了，体温38.5度，应该怎么处理？需要立即去医院吗？'",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T09:23:06.857174"
+          },
+          {
+            "name": "寻求就医指导",
+            "confidence": 0.7,
+            "evidence": "用户询问'需要立即去医院吗？'",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T09:23:06.857179"
+          },
+          {
+            "name": "问题分析阶段",
+            "confidence": 0.8,
+            "evidence": "用户正在分析孩子发烧的具体处理方式和就医必要性",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-08T09:23:06.857185"
+          }
+        ],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-08T09:23:23.097749",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "中年",
+            "confidence": 0.7,
+            "evidence": "用户询问高血压饮食注意事项，高血压是中年人群常见慢性病风险",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-08T09:23:23.095039"
+          },
+          {
+            "name": "慢性病患者",
+            "confidence": 0.8,
+            "evidence": "用户主动询问高血压的饮食管理，表明可能患有高血压需要长期管理",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T09:23:23.095060"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "生活方式改善",
+            "confidence": 0.9,
+            "evidence": "用户明确询问'高血压的饮食注意事项，平时应该吃什么不应该吃什么'",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T09:23:23.095065"
+          },
+          {
+            "name": "问题分析阶段",
+            "confidence": 0.6,
+            "evidence": "用户针对特定健康问题（高血压）寻求饮食管理建议",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-08T09:23:23.095068"
+          }
+        ],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-08T09:23:47.630178",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "青年",
+            "confidence": 0.7,
+            "evidence": "用户关注体质调理和生活习惯改善，符合青年群体对健康管理的关注特点",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-08T09:23:47.627672"
+          },
+          {
+            "name": "女",
+            "confidence": 0.8,
+            "evidence": "用户提到\"体质虚寒\"、\"手脚冰凉\"等典型女性关注的体质调理问题",
+            "category": "用户核心画像",
+            "subcategory": "性别",
+            "timestamp": "2025-09-08T09:23:47.627693"
+          },
+          {
+            "name": "个人健康管理者",
+            "confidence": 0.9,
+            "evidence": "\"我体质比较虚寒\"，用户为自己咨询健康调理方法",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T09:23:47.627697"
+          },
+          {
+            "name": "健康生活追求者",
+            "confidence": 0.8,
+            "evidence": "主动寻求体质调理和生活方式改善建议",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-08T09:23:47.627712"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "生活方式改善",
+            "confidence": 1.0,
+            "evidence": "\"我体质比较虚寒...有什么调理方法吗？\"直接询问生活方式改善建议",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-08T09:23:47.627717"
+          },
+          {
+            "name": "信息认知阶段",
+            "confidence": 0.9,
+            "evidence": "用户正在寻求健康调理相关信息和建议",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-08T09:23:47.627720"
+          }
+        ],
+        "用户商业价值": [
+          {
+            "name": "高活跃用户",
+            "confidence": 0.6,
+            "evidence": "主动咨询健康调理方法，表现出对健康管理的关注",
+            "category": "用户商业价值",
+            "subcategory": "价值等级",
+            "timestamp": "2025-09-08T09:23:47.627723"
+          },
+          {
+            "name": "纯免费用户",
+            "confidence": 0.7,
+            "evidence": "当前仅进行信息咨询，未涉及付费服务相关内容",
+            "category": "用户商业价值",
+            "subcategory": "付费敏感度",
+            "timestamp": "2025-09-08T09:23:47.627726"
+          }
+        ]
+      }
+    }
+  ]
+}
