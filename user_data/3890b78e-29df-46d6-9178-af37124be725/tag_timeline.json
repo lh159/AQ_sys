@@ -1,0 +1,205 @@
+{
+  "user_id": "3890b78e-29df-46d6-9178-af37124be725",
+  "tag_events": [
+    {
+      "timestamp": "2025-09-05T14:56:39.906030",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-05T14:56:59.410998",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "青年 (18-40岁)",
+            "confidence": 0.7,
+            "evidence": "用户提到'白天工作的时候又很困很疲惫'，表明处于工作阶段",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-05T14:56:59.408423"
+          },
+          {
+            "name": "个人健康管理者",
+            "confidence": 0.9,
+            "evidence": "用户描述'我最近总是失眠'，为自己咨询健康问题",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-05T14:56:59.408453"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "症状自我评估",
+            "confidence": 0.8,
+            "evidence": "用户描述失眠症状'晚上躺在床上翻来覆去睡不着，白天工作的时候又很困很疲惫'",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-05T14:56:59.408457"
+          },
+          {
+            "name": "生活方式改善",
+            "confidence": 0.6,
+            "evidence": "用户寻求失眠问题的解决方案，隐含改善生活方式的意图",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-05T14:56:59.408459"
+          },
+          {
+            "name": "问题分析阶段",
+            "confidence": 0.7,
+            "evidence": "用户正在分析具体的失眠健康问题",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-05T14:56:59.408462"
+          }
+        ],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-05T14:57:16.855963",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "青年 (18-40岁)",
+            "confidence": 0.9,
+            "evidence": "用户明确表示\"我是一个30岁的上班族\"",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-05T14:57:16.853842"
+          },
+          {
+            "name": "个人健康管理者",
+            "confidence": 0.8,
+            "evidence": "用户主动描述自己的工作压力和加班情况，表明是为自己咨询健康问题",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-05T14:57:16.853867"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "生活方式改善",
+            "confidence": 0.7,
+            "evidence": "用户描述工作压力大和经常加班的情况，隐含寻求改善生活方式的建议",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-05T14:57:16.853872"
+          },
+          {
+            "name": "信息认知阶段",
+            "confidence": 0.6,
+            "evidence": "用户主动分享健康困扰，处于了解健康知识和寻求建议的阶段",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-05T14:57:16.853875"
+          }
+        ],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-05T14:57:48.784926",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "婴幼儿 (0-3岁)",
+            "confidence": 0.7,
+            "evidence": "用户提到'孩子发烧了'，婴幼儿阶段是发烧高发期且需要特别关注",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-05T14:57:48.781804"
+          },
+          {
+            "name": "儿童 (4-11岁)",
+            "confidence": 0.6,
+            "evidence": "用户咨询孩子发烧处理，儿童阶段也是常见发烧人群",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-05T14:57:48.781821"
+          },
+          {
+            "name": "家庭健康决策者",
+            "confidence": 0.9,
+            "evidence": "用户为孩子咨询发烧处理方案，'孩子发烧了，应该怎么处理？'",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-05T14:57:48.781825"
+          }
+        ],
+        "产品使用路径与偏好": [
+          {
+            "name": "AI诊断依赖型",
+            "confidence": 0.8,
+            "evidence": "用户通过AI助手咨询发烧处理方案，'应该怎么处理？需要立即去医院吗？'",
+            "category": "产品使用路径与偏好",
+            "subcategory": "核心功能偏好",
+            "timestamp": "2025-09-05T14:57:48.781829"
+          },
+          {
+            "name": "文本交互型",
+            "confidence": 0.9,
+            "evidence": "用户通过文本描述症状和提问，'孩子发烧了，体温38.5度'",
+            "category": "产品使用路径与偏好",
+            "subcategory": "交互方式偏好",
+            "timestamp": "2025-09-05T14:57:48.781832"
+          }
+        ],
+        "用户意图与转化阶段": [
+          {
+            "name": "症状自我评估",
+            "confidence": 0.9,
+            "evidence": "用户描述孩子发烧症状并询问处理方式，'孩子发烧了，体温38.5度，应该怎么处理？'",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-05T14:57:48.781836"
+          },
+          {
+            "name": "寻求就医指导",
+            "confidence": 0.8,
+            "evidence": "用户询问是否需要立即就医，'需要立即去医院吗？'",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-05T14:57:48.781839"
+          },
+          {
+            "name": "问题分析阶段",
+            "confidence": 0.9,
+            "evidence": "用户正在使用AI功能分析具体的健康问题，咨询发烧处理方案",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-05T14:57:48.781842"
+          }
+        ],
+        "用户商业价值": [
+          {
+            "name": "高潜力用户",
+            "confidence": 0.7,
+            "evidence": "用户使用AI诊断功能咨询儿童健康问题，有转化为付费用户的可能",
+            "category": "用户商业价值",
+            "subcategory": "value_level",
+            "timestamp": "2025-09-05T14:57:48.781845"
+          },
+          {
+            "name": "纯免费用户",
+            "confidence": 0.8,
+            "evidence": "当前对话显示用户在使用免费的AI咨询功能，未涉及付费服务",
+            "category": "用户商业价值",
+            "subcategory": "payment_sensitivity",
+            "timestamp": "2025-09-05T14:57:48.781848"
+          }
+        ]
+      }
+    }
+  ]
+}

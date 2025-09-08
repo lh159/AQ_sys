@@ -1,0 +1,250 @@
+{
+  "user_id": "3890b78e-29df-46d6-9178-af37124be725",
+  "created_at": "2025-09-05T14:56:32.123377",
+  "last_updated": "2025-09-05T14:57:48.783415",
+  "tag_dimensions": {
+    "用户核心画像": {
+      "年龄段": [
+        {
+          "tag_name": "婴幼儿 (0-3岁)",
+          "confidence": 0.6363636363636362,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T14:57:48.781804",
+          "last_reinforced": "2025-09-05T14:57:48.781804",
+          "evidence_list": [
+            "用户提到'孩子发烧了'，婴幼儿阶段是发烧高发期且需要特别关注"
+          ],
+          "decay_rate": 0.1
+        },
+        {
+          "tag_name": "儿童 (4-11岁)",
+          "confidence": 0.5454545454545454,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T14:57:48.781821",
+          "last_reinforced": "2025-09-05T14:57:48.781821",
+          "evidence_list": [
+            "用户咨询孩子发烧处理，儿童阶段也是常见发烧人群"
+          ],
+          "decay_rate": 0.1
+        }
+      ],
+      "性别": [],
+      "所在地区": [],
+      "健康角色": [
+        {
+          "tag_name": "个人健康管理者",
+          "confidence": 0.5643939393939394,
+          "reinforcement_count": 2,
+          "first_seen": "2025-09-05T14:56:59.408453",
+          "last_reinforced": "2025-09-05T14:57:16.853867",
+          "evidence_list": [
+            "用户描述'我最近总是失眠'，为自己咨询健康问题",
+            "用户主动描述自己的工作压力和加班情况，表明是为自己咨询健康问题"
+          ],
+          "decay_rate": 0.1
+        },
+        {
+          "tag_name": "家庭健康决策者",
+          "confidence": 0.8181818181818181,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T14:57:48.781825",
+          "last_reinforced": "2025-09-05T14:57:48.781825",
+          "evidence_list": [
+            "用户为孩子咨询发烧处理方案，'孩子发烧了，应该怎么处理？'"
+          ],
+          "decay_rate": 0.1
+        }
+      ]
+    },
+    "产品使用路径与偏好": {
+      "核心功能偏好": [
+        {
+          "tag_name": "AI诊断依赖型",
+          "confidence": 0.7272727272727273,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T14:57:48.781829",
+          "last_reinforced": "2025-09-05T14:57:48.781829",
+          "evidence_list": [
+            "用户通过AI助手咨询发烧处理方案，'应该怎么处理？需要立即去医院吗？'"
+          ],
+          "decay_rate": 0.1
+        }
+      ],
+      "交互方式偏好": [
+        {
+          "tag_name": "文本交互型",
+          "confidence": 0.8181818181818181,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T14:57:48.781832",
+          "last_reinforced": "2025-09-05T14:57:48.781832",
+          "evidence_list": [
+            "用户通过文本描述症状和提问，'孩子发烧了，体温38.5度'"
+          ],
+          "decay_rate": 0.1
+        }
+      ]
+    },
+    "用户意图与转化阶段": {
+      "具体意图分类": [
+        {
+          "tag_name": "症状自我评估",
+          "confidence": 0.6106749311294767,
+          "reinforcement_count": 2,
+          "first_seen": "2025-09-05T14:56:59.408457",
+          "last_reinforced": "2025-09-05T14:57:48.781836",
+          "evidence_list": [
+            "用户描述失眠症状'晚上躺在床上翻来覆去睡不着，白天工作的时候又很困很疲惫'",
+            "用户描述孩子发烧症状并询问处理方式，'孩子发烧了，体温38.5度，应该怎么处理？'"
+          ],
+          "decay_rate": 0.1
+        },
+        {
+          "tag_name": "生活方式改善",
+          "confidence": 0.4109848484848485,
+          "reinforcement_count": 2,
+          "first_seen": "2025-09-05T14:56:59.408459",
+          "last_reinforced": "2025-09-05T14:57:16.853872",
+          "evidence_list": [
+            "用户寻求失眠问题的解决方案，隐含改善生活方式的意图",
+            "用户描述工作压力大和经常加班的情况，隐含寻求改善生活方式的建议"
+          ],
+          "decay_rate": 0.1
+        },
+        {
+          "tag_name": "寻求就医指导",
+          "confidence": 0.7272727272727273,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T14:57:48.781839",
+          "last_reinforced": "2025-09-05T14:57:48.781839",
+          "evidence_list": [
+            "用户询问是否需要立即就医，'需要立即去医院吗？'"
+          ],
+          "decay_rate": 0.1
+        }
+      ],
+      "转化阶段": [
+        {
+          "tag_name": "问题分析阶段",
+          "confidence": 0.5624655647382919,
+          "reinforcement_count": 2,
+          "first_seen": "2025-09-05T14:56:59.408462",
+          "last_reinforced": "2025-09-05T14:57:48.781842",
+          "evidence_list": [
+            "用户正在分析具体的失眠健康问题",
+            "用户正在使用AI功能分析具体的健康问题，咨询发烧处理方案"
+          ],
+          "decay_rate": 0.1
+        },
+        {
+          "tag_name": "信息认知阶段",
+          "confidence": 0.4958677685950412,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T14:57:16.853875",
+          "last_reinforced": "2025-09-05T14:57:16.853875",
+          "evidence_list": [
+            "用户主动分享健康困扰，处于了解健康知识和寻求建议的阶段"
+          ],
+          "decay_rate": 0.1
+        }
+      ]
+    },
+    "用户商业价值": {
+      "价值等级": [],
+      "付费敏感度": [],
+      "value_level": [
+        {
+          "tag_name": "高潜力用户",
+          "confidence": 0.6363636363636362,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T14:57:48.781845",
+          "last_reinforced": "2025-09-05T14:57:48.781845",
+          "evidence_list": [
+            "用户使用AI诊断功能咨询儿童健康问题，有转化为付费用户的可能"
+          ],
+          "decay_rate": 0.1
+        }
+      ],
+      "payment_sensitivity": [
+        {
+          "tag_name": "纯免费用户",
+          "confidence": 0.7272727272727273,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T14:57:48.781848",
+          "last_reinforced": "2025-09-05T14:57:48.781848",
+          "evidence_list": [
+            "当前对话显示用户在使用免费的AI咨询功能，未涉及付费服务"
+          ],
+          "decay_rate": 0.1
+        }
+      ]
+    }
+  },
+  "profile_maturity": 0.8,
+  "total_interactions": 4,
+  "dimension_summaries": [
+    {
+      "dimension_name": "用户核心画像",
+      "subdimension_name": "年龄段",
+      "dominant_tag": "婴幼儿 (0-3岁)",
+      "confidence": 0.6363636363636362,
+      "tag_count": 2,
+      "last_updated": "2025-09-05T14:57:48.781804"
+    },
+    {
+      "dimension_name": "用户核心画像",
+      "subdimension_name": "健康角色",
+      "dominant_tag": "家庭健康决策者",
+      "confidence": 0.8181818181818181,
+      "tag_count": 2,
+      "last_updated": "2025-09-05T14:57:48.781825"
+    },
+    {
+      "dimension_name": "产品使用路径与偏好",
+      "subdimension_name": "核心功能偏好",
+      "dominant_tag": "AI诊断依赖型",
+      "confidence": 0.7272727272727273,
+      "tag_count": 1,
+      "last_updated": "2025-09-05T14:57:48.781829"
+    },
+    {
+      "dimension_name": "产品使用路径与偏好",
+      "subdimension_name": "交互方式偏好",
+      "dominant_tag": "文本交互型",
+      "confidence": 0.8181818181818181,
+      "tag_count": 1,
+      "last_updated": "2025-09-05T14:57:48.781832"
+    },
+    {
+      "dimension_name": "用户意图与转化阶段",
+      "subdimension_name": "具体意图分类",
+      "dominant_tag": "寻求就医指导",
+      "confidence": 0.7272727272727273,
+      "tag_count": 3,
+      "last_updated": "2025-09-05T14:57:48.781839"
+    },
+    {
+      "dimension_name": "用户意图与转化阶段",
+      "subdimension_name": "转化阶段",
+      "dominant_tag": "问题分析阶段",
+      "confidence": 0.5624655647382919,
+      "tag_count": 2,
+      "last_updated": "2025-09-05T14:57:48.781842"
+    },
+    {
+      "dimension_name": "用户商业价值",
+      "subdimension_name": "value_level",
+      "dominant_tag": "高潜力用户",
+      "confidence": 0.6363636363636362,
+      "tag_count": 1,
+      "last_updated": "2025-09-05T14:57:48.781845"
+    },
+    {
+      "dimension_name": "用户商业价值",
+      "subdimension_name": "payment_sensitivity",
+      "dominant_tag": "纯免费用户",
+      "confidence": 0.7272727272727273,
+      "tag_count": 1,
+      "last_updated": "2025-09-05T14:57:48.781848"
+    }
+  ]
+}

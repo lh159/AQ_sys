@@ -1,0 +1,113 @@
+{
+  "user_id": "test_user_123",
+  "created_at": "2025-09-05T15:08:42.914683",
+  "last_updated": "2025-09-05T15:09:15.733615",
+  "tag_dimensions": {
+    "用户核心画像": {
+      "年龄段": [
+        {
+          "tag_name": "青年 (18-40岁)",
+          "confidence": 0.7272727272727272,
+          "reinforcement_count": 2,
+          "first_seen": "2025-09-05T15:08:59.080071",
+          "last_reinforced": "2025-09-05T15:09:15.732857",
+          "evidence_list": [
+            "用户明确提到\"我30岁了\"",
+            "用户明确表示\"我30岁了\""
+          ],
+          "decay_rate": 0.1
+        }
+      ],
+      "性别": [],
+      "所在地区": [],
+      "健康角色": [
+        {
+          "tag_name": "个人健康管理者",
+          "confidence": 0.6492424242424243,
+          "reinforcement_count": 2,
+          "first_seen": "2025-09-05T15:08:59.080088",
+          "last_reinforced": "2025-09-05T15:09:15.732877",
+          "evidence_list": [
+            "用户使用第一人称\"我\"描述自身失眠问题",
+            "用户使用第一人称\"我\"描述自身失眠问题，表明是为自己咨询"
+          ],
+          "decay_rate": 0.1
+        }
+      ]
+    },
+    "产品使用路径与偏好": {
+      "核心功能偏好": [],
+      "交互方式偏好": []
+    },
+    "用户意图与转化阶段": {
+      "具体意图分类": [
+        {
+          "tag_name": "症状自我评估",
+          "confidence": 0.5712121212121212,
+          "reinforcement_count": 2,
+          "first_seen": "2025-09-05T15:08:59.080093",
+          "last_reinforced": "2025-09-05T15:09:15.732882",
+          "evidence_list": [
+            "用户描述症状\"最近总是失眠\"，寻求健康建议",
+            "用户描述症状\"最近总是失眠\"，隐含寻求原因或解决方案的意图"
+          ],
+          "decay_rate": 0.1
+        }
+      ],
+      "转化阶段": [
+        {
+          "tag_name": "问题分析阶段",
+          "confidence": 0.49318181818181817,
+          "reinforcement_count": 2,
+          "first_seen": "2025-09-05T15:08:59.080095",
+          "last_reinforced": "2025-09-05T15:09:15.732884",
+          "evidence_list": [
+            "用户主动描述健康问题，助手提供初步建议，符合问题分析特征",
+            "用户主动提出具体健康问题，处于分析失眠原因的阶段"
+          ],
+          "decay_rate": 0.1
+        }
+      ]
+    },
+    "用户商业价值": {
+      "价值等级": [],
+      "付费敏感度": []
+    }
+  },
+  "profile_maturity": 0.2,
+  "total_interactions": 2,
+  "dimension_summaries": [
+    {
+      "dimension_name": "用户核心画像",
+      "subdimension_name": "年龄段",
+      "dominant_tag": "青年 (18-40岁)",
+      "confidence": 0.7272727272727272,
+      "tag_count": 1,
+      "last_updated": "2025-09-05T15:09:15.732857"
+    },
+    {
+      "dimension_name": "用户核心画像",
+      "subdimension_name": "健康角色",
+      "dominant_tag": "个人健康管理者",
+      "confidence": 0.6492424242424243,
+      "tag_count": 1,
+      "last_updated": "2025-09-05T15:09:15.732877"
+    },
+    {
+      "dimension_name": "用户意图与转化阶段",
+      "subdimension_name": "具体意图分类",
+      "dominant_tag": "症状自我评估",
+      "confidence": 0.5712121212121212,
+      "tag_count": 1,
+      "last_updated": "2025-09-05T15:09:15.732882"
+    },
+    {
+      "dimension_name": "用户意图与转化阶段",
+      "subdimension_name": "转化阶段",
+      "dominant_tag": "问题分析阶段",
+      "confidence": 0.49318181818181817,
+      "tag_count": 1,
+      "last_updated": "2025-09-05T15:09:15.732884"
+    }
+  ]
+}

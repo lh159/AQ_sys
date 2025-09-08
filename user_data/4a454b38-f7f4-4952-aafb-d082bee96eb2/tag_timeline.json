@@ -1,0 +1,111 @@
+{
+  "user_id": "4a454b38-f7f4-4952-aafb-d082bee96eb2",
+  "tag_events": [
+    {
+      "timestamp": "2025-09-05T15:04:32.592448",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-05T15:04:52.316400",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "青年 (18-40岁)",
+            "confidence": 0.8,
+            "evidence": "用户提到'白天工作的时候又很困很疲惫'，表明有工作状态，符合青年年龄段特征",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-05T15:04:52.314428"
+          },
+          {
+            "name": "个人健康管理者",
+            "confidence": 0.9,
+            "evidence": "用户描述'我最近总是失眠'，为自己咨询健康问题",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-05T15:04:52.314491"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "症状自我评估",
+            "confidence": 0.9,
+            "evidence": "用户描述失眠症状'晚上躺在床上翻来覆去睡不着，白天工作的时候又很困很疲惫'",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-05T15:04:52.314497"
+          },
+          {
+            "name": "生活方式改善",
+            "confidence": 0.7,
+            "evidence": "用户寻求失眠问题的解决方案，隐含改善生活方式的意图",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-05T15:04:52.314501"
+          },
+          {
+            "name": "问题分析阶段",
+            "confidence": 0.8,
+            "evidence": "用户正在分析具体的失眠健康问题",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-05T15:04:52.314505"
+          }
+        ],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-05T15:05:09.770363",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "青年 (18-40岁)",
+            "confidence": 0.9,
+            "evidence": "用户明确表示'我是一个30岁的上班族'",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-05T15:05:09.769050"
+          },
+          {
+            "name": "个人健康管理者",
+            "confidence": 0.8,
+            "evidence": "用户描述自己的工作压力和加班情况，表明是为自己咨询健康问题",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-05T15:05:09.769065"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "生活方式改善",
+            "confidence": 0.7,
+            "evidence": "用户描述工作压力大和经常加班，暗示寻求改善生活方式的建议",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-05T15:05:09.769071"
+          },
+          {
+            "name": "信息认知阶段",
+            "confidence": 0.6,
+            "evidence": "用户描述自身情况但未明确寻求具体服务，处于初步咨询阶段",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-05T15:05:09.769075"
+          }
+        ],
+        "用户商业价值": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "user_id": "test_user_123",
+  "tag_events": [
+    {
+      "timestamp": "2025-09-05T15:08:59.082286",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "青年 (18-40岁)",
+            "confidence": 0.9,
+            "evidence": "用户明确提到\"我30岁了\"",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-05T15:08:59.080071"
+          },
+          {
+            "name": "个人健康管理者",
+            "confidence": 0.8,
+            "evidence": "用户使用第一人称\"我\"描述自身失眠问题",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-05T15:08:59.080088"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "症状自我评估",
+            "confidence": 0.7,
+            "evidence": "用户描述症状\"最近总是失眠\"，寻求健康建议",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-05T15:08:59.080093"
+          },
+          {
+            "name": "问题分析阶段",
+            "confidence": 0.6,
+            "evidence": "用户主动描述健康问题，助手提供初步建议，符合问题分析特征",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-05T15:08:59.080095"
+          }
+        ],
+        "用户商业价值": []
+      }
+    },
+    {
+      "timestamp": "2025-09-05T15:09:15.736964",
+      "event_type": "tag_extraction",
+      "extracted_tags": {
+        "用户核心画像": [
+          {
+            "name": "青年 (18-40岁)",
+            "confidence": 1.0,
+            "evidence": "用户明确表示\"我30岁了\"",
+            "category": "用户核心画像",
+            "subcategory": "年龄段",
+            "timestamp": "2025-09-05T15:09:15.732857"
+          },
+          {
+            "name": "个人健康管理者",
+            "confidence": 0.9,
+            "evidence": "用户使用第一人称\"我\"描述自身失眠问题，表明是为自己咨询",
+            "category": "用户核心画像",
+            "subcategory": "健康角色",
+            "timestamp": "2025-09-05T15:09:15.732877"
+          }
+        ],
+        "产品使用路径与偏好": [],
+        "用户意图与转化阶段": [
+          {
+            "name": "症状自我评估",
+            "confidence": 0.8,
+            "evidence": "用户描述症状\"最近总是失眠\"，隐含寻求原因或解决方案的意图",
+            "category": "用户意图与转化阶段",
+            "subcategory": "具体意图分类",
+            "timestamp": "2025-09-05T15:09:15.732882"
+          },
+          {
+            "name": "问题分析阶段",
+            "confidence": 0.7,
+            "evidence": "用户主动提出具体健康问题，处于分析失眠原因的阶段",
+            "category": "用户意图与转化阶段",
+            "subcategory": "转化阶段",
+            "timestamp": "2025-09-05T15:09:15.732884"
+          }
+        ],
+        "用户商业价值": []
+      }
+    }
+  ]
+}

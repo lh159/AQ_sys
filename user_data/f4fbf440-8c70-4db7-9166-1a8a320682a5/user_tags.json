@@ -1,0 +1,129 @@
+{
+  "user_id": "f4fbf440-8c70-4db7-9166-1a8a320682a5",
+  "created_at": "2025-09-05T10:16:09.051490",
+  "last_updated": "2025-09-05T10:21:03.304357",
+  "tag_dimensions": {
+    "用户核心画像": {
+      "年龄段": [
+        {
+          "tag_name": "青年 (18-40岁)",
+          "confidence": 0.9090909090909091,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T10:21:03.303680",
+          "last_reinforced": "2025-09-05T10:21:03.303680",
+          "evidence_list": [
+            "用户明确表示'我是一个25岁的女性'"
+          ],
+          "decay_rate": 0.1
+        }
+      ],
+      "性别": [
+        {
+          "tag_name": "女",
+          "confidence": 0.9090909090909091,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T10:21:03.303703",
+          "last_reinforced": "2025-09-05T10:21:03.303703",
+          "evidence_list": [
+            "用户明确表示'我是一个25岁的女性'"
+          ],
+          "decay_rate": 0.1
+        }
+      ],
+      "所在地区": [],
+      "健康角色": [
+        {
+          "tag_name": "个人健康管理者",
+          "confidence": 0.8181818181818181,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T10:21:03.303707",
+          "last_reinforced": "2025-09-05T10:21:03.303707",
+          "evidence_list": [
+            "用户咨询自身月经不规律问题'最近月经不规律，周期变长了'"
+          ],
+          "decay_rate": 0.1
+        }
+      ]
+    },
+    "产品使用路径与偏好": {
+      "核心功能偏好": [],
+      "交互方式偏好": []
+    },
+    "用户意图与转化阶段": {
+      "具体意图分类": [
+        {
+          "tag_name": "症状自我评估",
+          "confidence": 0.7272727272727273,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T10:21:03.303711",
+          "last_reinforced": "2025-09-05T10:21:03.303711",
+          "evidence_list": [
+            "用户询问'月经不规律，周期变长了，是不是有什么问题？'，属于症状评估意图"
+          ],
+          "decay_rate": 0.1
+        }
+      ],
+      "转化阶段": [
+        {
+          "tag_name": "问题分析阶段",
+          "confidence": 0.6363636363636362,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T10:21:03.303713",
+          "last_reinforced": "2025-09-05T10:21:03.303713",
+          "evidence_list": [
+            "用户正在分析具体的健康问题'月经不规律，周期变长了'"
+          ],
+          "decay_rate": 0.1
+        }
+      ]
+    },
+    "用户商业价值": {
+      "价值等级": [],
+      "付费敏感度": []
+    }
+  },
+  "profile_maturity": 0.5,
+  "total_interactions": 2,
+  "dimension_summaries": [
+    {
+      "dimension_name": "用户核心画像",
+      "subdimension_name": "年龄段",
+      "dominant_tag": "青年 (18-40岁)",
+      "confidence": 0.9090909090909091,
+      "tag_count": 1,
+      "last_updated": "2025-09-05T10:21:03.303680"
+    },
+    {
+      "dimension_name": "用户核心画像",
+      "subdimension_name": "性别",
+      "dominant_tag": "女",
+      "confidence": 0.9090909090909091,
+      "tag_count": 1,
+      "last_updated": "2025-09-05T10:21:03.303703"
+    },
+    {
+      "dimension_name": "用户核心画像",
+      "subdimension_name": "健康角色",
+      "dominant_tag": "个人健康管理者",
+      "confidence": 0.8181818181818181,
+      "tag_count": 1,
+      "last_updated": "2025-09-05T10:21:03.303707"
+    },
+    {
+      "dimension_name": "用户意图与转化阶段",
+      "subdimension_name": "具体意图分类",
+      "dominant_tag": "症状自我评估",
+      "confidence": 0.7272727272727273,
+      "tag_count": 1,
+      "last_updated": "2025-09-05T10:21:03.303711"
+    },
+    {
+      "dimension_name": "用户意图与转化阶段",
+      "subdimension_name": "转化阶段",
+      "dominant_tag": "问题分析阶段",
+      "confidence": 0.6363636363636362,
+      "tag_count": 1,
+      "last_updated": "2025-09-05T10:21:03.303713"
+    }
+  ]
+}

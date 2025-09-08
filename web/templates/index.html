@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQ-用户标签系统</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            gap: 15px;
+            padding: 15px;
+        }
+
+        .chat-section {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .chat-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .chat-header h1 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .chat-header p {
+            margin-top: 5px;
+            opacity: 0.9;
+            font-size: 14px;
+        }
+
+        .chat-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background-color: #fafbfc;
+        }
+
+        .message {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .message-content {
+            max-width: 70%;
+            padding: 12px 16px;
+            border-radius: 18px;
+            font-size: 14px;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+
+        .user-message {
+            justify-content: flex-end;
+        }
+
+        .user-message .message-content {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-bottom-right-radius: 4px;
+        }
+
+        .system-message .message-content {
+            background: #e9ecef;
+            color: #495057;
+            border-bottom-left-radius: 4px;
+            border: 1px solid #dee2e6;
+        }
+
+        .message-avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #6c757d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .user-avatar {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        /* 文件上传区域样式 */
+        .file-upload-section {
+            background: white;
+            border-top: 1px solid #e9ecef;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .upload-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background: #f8f9fa;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .upload-header h3 {
+            margin: 0;
+            font-size: 16px;
+            color: #495057;
+        }
+
+        .toggle-upload-btn {
+            background: transparent;
+            border: 1px solid #667eea;
+            color: #667eea;
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .toggle-upload-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .upload-content {
+            padding: 20px;
+        }
+
+        .upload-zone {
+            border: 2px dashed #dee2e6;
+            border-radius: 8px;
+            padding: 40px 20px;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .upload-zone:hover {
+            border-color: #667eea;
+            background: #f8f9ff;
+        }
+
+        .upload-zone.dragover {
+            border-color: #667eea;
+            background: #f0f4ff;
+        }
+
+        .upload-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .upload-link {
+            color: #667eea;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .upload-hint {
+            font-size: 12px;
+            color: #6c757d;
+            margin-top: 5px;
+        }
+
+        .file-info {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .file-name {
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 5px;
+        }
+
+        .file-stats {
+            font-size: 12px;
+            color: #6c757d;
+        }
+
+        .file-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .analyze-btn, .clear-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .analyze-btn {
+            background: #28a745;
+            color: white;
+        }
+
+        .analyze-btn:hover {
+            background: #218838;
+        }
+
+        .analyze-btn:disabled {
+            background: #6c757d;
+            cursor: not-allowed;
+        }
+
+        .clear-btn {
+            background: #dc3545;
+            color: white;
+        }
+
+        .clear-btn:hover {
+            background: #c82333;
+        }
+
+        .analysis-progress {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            width: 0%;
+            transition: width 0.3s;
+        }
+
+        .progress-details {
+            font-size: 12px;
+            color: #6c757d;
+            margin-top: 8px;
+        }
+
+        .chat-input {
+            padding: 20px;
+            background: white;
+            border-top: 1px solid #e9ecef;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        #messageInput {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid #e9ecef;
+            border-radius: 25px;
+            font-size: 14px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        #messageInput:focus {
+            border-color: #667eea;
+        }
+
+        .send-btn {
+            padding: 12px 24px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+            transition: transform 0.2s;
+        }
+
+        .send-btn:hover {
+            transform: translateY(-1px);
+        }
+
+        .send-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .profile-section {
+            flex: 1;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile-content {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .profile-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e9ecef;
+        }
+
+        .stat-value {
+            font-size: 20px;
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #6c757d;
+            margin-top: 4px;
+        }
+
+        .dimension-card {
+            background: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            transition: box-shadow 0.3s;
+        }
+
+        .dimension-card:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .dimension-title {
+            font-weight: 600;
+            color: #495057;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .dimension-subtitle {
+            font-size: 12px;
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+
+        .tag-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tag-name {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .confidence-bar {
+            width: 60px;
+            height: 6px;
+            background: #e9ecef;
+            border-radius: 3px;
+            overflow: hidden;
+            margin-left: 10px;
+        }
+
+        .confidence-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+            transition: width 0.3s;
+        }
+
+        .confidence-text {
+            font-size: 11px;
+            color: #6c757d;
+            margin-left: 5px;
+        }
+
+        .empty-state {
+            text-align: center;
+            color: #6c757d;
+            font-style: italic;
+            padding: 40px 20px;
+        }
+
+        .loading {
+            text-align: center;
+            color: #6c757d;
+            padding: 20px;
+        }
+
+        .controls {
+            padding: 15px 20px;
+            border-top: 1px solid #e9ecef;
+            background: #f8f9fa;
+        }
+
+        .control-btn {
+            width: 100%;
+            padding: 8px 16px;
+            background: #6c757d;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 12px;
+            transition: background-color 0.3s;
+        }
+
+        .control-btn:hover {
+            background: #545b62;
+        }
+
+        .maturity-progress {
+            margin: 15px 0;
+        }
+
+        .maturity-label {
+            font-size: 12px;
+            color: #6c757d;
+            margin-bottom: 5px;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            transition: width 0.5s ease;
+        }
+
+        .maturity-text {
+            font-size: 11px;
+            color: #495057;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+                min-height: 100vh;
+            }
+            
+            .chat-section {
+                flex: none;
+                height: 60vh;
+            }
+            
+            .profile-section {
+                flex: none;
+                height: 40vh;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="chat-section">
+            <div class="chat-header">
+                <h1>🏥 AQ-用户标签系统</h1>
+                <p>智能分析医疗健康对话，构建动态用户画像</p>
+            </div>
+            
+            <div class="chat-messages" id="chatMessages">
+                <div class="message system-message">
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        欢迎使用AQ用户标签系统！请描述你的健康问题或需求，我会分析并更新你的用户画像。
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 文件上传区域 -->
+            <div class="file-upload-section" id="fileUploadSection">
+                <div class="upload-header">
+                    <h3>📁 批量对话分析</h3>
+                    <button class="toggle-upload-btn" onclick="toggleFileUpload()">
+                        <span id="uploadToggleText">展开上传</span>
+                    </button>
+                </div>
+                
+                <div class="upload-content" id="uploadContent" style="display: none;">
+                    <div class="upload-zone" id="uploadZone">
+                        <div class="upload-placeholder">
+                            <div class="upload-icon">📄</div>
+                            <p>拖拽文件到此处或 <span class="upload-link" onclick="triggerFileSelect()">点击选择文件</span></p>
+                            <p class="upload-hint">支持 .txt, .json, .md 格式的对话文件</p>
+                        </div>
+                        <input type="file" id="fileInput" accept=".txt,.json,.md" style="display: none;" onchange="handleFileSelect(event)">
+                    </div>
+                    
+                    <div class="file-info" id="fileInfo" style="display: none;">
+                        <div class="file-details">
+                            <div class="file-name" id="fileName"></div>
+                            <div class="file-stats" id="fileStats"></div>
+                        </div>
+                        <div class="file-actions">
+                            <button class="analyze-btn" onclick="startFileAnalysis()" id="analyzeBtn">开始分析</button>
+                            <button class="clear-btn" onclick="clearFile()">清除</button>
+                        </div>
+                    </div>
+                    
+                    <div class="analysis-progress" id="analysisProgress" style="display: none;">
+                        <div class="progress-header">
+                            <span id="progressText">正在分析...</span>
+                            <span id="progressPercent">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <div class="progress-details" id="progressDetails"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" id="messageInput" placeholder="请描述你的健康问题或需求，或上传对话文件进行批量分析..." 
+                       onkeypress="if(event.key==='Enter') sendMessage()" maxlength="500">
+                <button class="send-btn" onclick="sendMessage()" id="sendButton">发送</button>
+            </div>
+        </div>
+        
+        <div class="profile-section">
+            <div class="profile-header">
+                <h2>👤 用户画像分析</h2>
+            </div>
+            
+            <div class="profile-content" id="profileContent">
+                <div class="empty-state">
+                    <p>开始对话后，这里会显示基于你的描述自动分析出的用户画像标签</p>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button class="control-btn" onclick="resetUser()">重置会话</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let isProcessing = false;
+
+        async function sendMessage() {
+            if (isProcessing) return;
+
+            const input = document.getElementById('messageInput');
+            const sendButton = document.getElementById('sendButton');
+            const message = input.value.trim();
+            
+            if (!message) return;
+
+            // 添加用户消息到聊天区域
+            addMessageToChat('user', message);
+            
+            // 清空输入框并禁用发送按钮
+            input.value = '';
+            sendButton.disabled = true;
+            sendButton.textContent = '分析中...';
+            isProcessing = true;
+
+            try {
+                const response = await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ message: message })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    // 显示处理结果
+                    const extractedCount = Object.values(data.newly_extracted_tags)
+                        .reduce((sum, tags) => sum + tags.length, 0);
+                    
+                    let resultMessage = `✅ 分析完成！从你的描述中提取了 ${extractedCount} 个标签`;
+                    if (extractedCount > 0 && data.updated_user_profile && typeof data.updated_user_profile.profile_maturity === 'number') {
+                        resultMessage += `，画像成熟度更新为 ${(data.updated_user_profile.profile_maturity * 100).toFixed(1)}%`;
+                    }
+                    
+                    addMessageToChat('system', resultMessage);
+                    
+                    // 更新用户画像显示
+                    updateProfile(data.updated_user_profile);
+                    
+                } else {
+                    addMessageToChat('system', `❌ 分析失败：${data.error}`);
+                }
+
+            } catch (error) {
+                console.error('请求错误:', error);
+                addMessageToChat('system', '❌ 网络连接错误，请检查网络后重试');
+            } finally {
+                // 恢复发送按钮
+                sendButton.disabled = false;
+                sendButton.textContent = '发送';
+                isProcessing = false;
+                input.focus();
+            }
+        }
+
+        function addMessageToChat(sender, text) {
+            const chatMessages = document.getElementById('chatMessages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}-message`;
+            
+            const avatar = document.createElement('div');
+            avatar.className = `message-avatar ${sender === 'user' ? 'user-avatar' : ''}`;
+            avatar.textContent = sender === 'user' ? '👤' : '🤖';
+            
+            const content = document.createElement('div');
+            content.className = 'message-content';
+            content.textContent = text;
+            
+            if (sender === 'user') {
+                messageDiv.appendChild(content);
+                messageDiv.appendChild(avatar);
+            } else {
+                messageDiv.appendChild(avatar);
+                messageDiv.appendChild(content);
+            }
+            
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        // 刷新用户画像数据
+        async function refreshProfile() {
+            try {
+                const response = await fetch('/api/profile', {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                const result = await response.json();
+                if (result.success && result.user_profile) {
+                    updateProfile(result.user_profile);
+                } else {
+                    console.log('获取用户画像失败:', result.error);
+                    // 显示空状态
+                    updateProfile(null);
+                }
+            } catch (error) {
+                console.error('刷新用户画像出错:', error);
+                updateProfile(null);
+            }
+        }
+
+        function updateProfile(profileData) {
+            const profileContent = document.getElementById('profileContent');
+            
+            if (!profileData || !profileData.dimension_summaries || profileData.dimension_summaries.length === 0) {
+                profileContent.innerHTML = `
+                    <div class="empty-state">
+                        <p>暂无画像数据，请继续对话以建立用户画像</p>
+                    </div>
+                `;
+                return;
+            }
+
+            let html = `
+                <div class="profile-stats">
+                    <div class="stat-card">
+                        <div class="stat-value">${profileData.total_interactions || 0}</div>
+                        <div class="stat-label">对话次数</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">${profileData.dimension_summaries.length}</div>
+                        <div class="stat-label">画像维度</div>
+                    </div>
+                </div>
+                
+                <div class="maturity-progress">
+                    <div class="maturity-label">画像成熟度</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: ${typeof profileData.profile_maturity === 'number' ? (profileData.profile_maturity * 100) : 0}%"></div>
+                    </div>
+                    <div class="maturity-text">${typeof profileData.profile_maturity === 'number' ? (profileData.profile_maturity * 100).toFixed(1) : '0.0'}%</div>
+                </div>
+            `;
+
+            // 按维度分组显示
+            const groupedDimensions = {};
+            profileData.dimension_summaries.forEach(summary => {
+                if (!groupedDimensions[summary.dimension_name]) {
+                    groupedDimensions[summary.dimension_name] = [];
+                }
+                groupedDimensions[summary.dimension_name].push(summary);
+            });
+
+            Object.entries(groupedDimensions).forEach(([dimensionName, summaries]) => {
+                html += `<div class="dimension-group">`;
+                
+                summaries.forEach(summary => {
+                    html += `
+                        <div class="dimension-card">
+                            <div class="dimension-title">${dimensionName}</div>
+                            <div class="dimension-subtitle">${summary.subdimension_name}</div>
+                            <div class="tag-info">
+                                <span class="tag-name">${summary.dominant_tag}</span>
+                                <div style="display: flex; align-items: center;">
+                                    <div class="confidence-bar">
+                                        <div class="confidence-fill" style="width: ${typeof summary.confidence === 'number' ? (summary.confidence * 100) : 0}%"></div>
+                                    </div>
+                                    <span class="confidence-text">${typeof summary.confidence === 'number' ? (summary.confidence * 100).toFixed(0) : '0'}%</span>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                });
+                
+                html += `</div>`;
+            });
+
+            profileContent.innerHTML = html;
+        }
+
+        async function resetUser() {
+            if (!confirm('确定要重置用户会话吗？这将清除当前的画像数据。')) {
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/reset_user', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                });
+
+                const data = await response.json();
+                
+                if (data.success) {
+                    // 清空聊天记录
+                    const chatMessages = document.getElementById('chatMessages');
+                    chatMessages.innerHTML = `
+                        <div class="message system-message">
+                            <div class="message-avatar">🤖</div>
+                            <div class="message-content">
+                                会话已重置！请重新描述你的健康问题或需求，我会为你建立新的用户画像。
+                            </div>
+                        </div>
+                    `;
+                    
+                    // 重置画像显示
+                    const profileContent = document.getElementById('profileContent');
+                    profileContent.innerHTML = `
+                        <div class="empty-state">
+                            <p>开始对话后，这里会显示基于你的描述自动分析出的用户画像标签</p>
+                        </div>
+                    `;
+                    
+                } else {
+                    alert('重置失败：' + data.error);
+                }
+            } catch (error) {
+                alert('网络错误，请重试');
+            }
+        }
+
+        // 文件上传相关变量
+        let uploadedFileContent = null;
+        let uploadedFileName = null;
+        let isFileAnalyzing = false;
+
+        // 切换文件上传区域显示/隐藏
+        function toggleFileUpload() {
+            const uploadContent = document.getElementById('uploadContent');
+            const toggleText = document.getElementById('uploadToggleText');
+            
+            if (uploadContent.style.display === 'none') {
+                uploadContent.style.display = 'block';
+                toggleText.textContent = '收起上传';
+            } else {
+                uploadContent.style.display = 'none';
+                toggleText.textContent = '展开上传';
+            }
+        }
+
+        // 触发文件选择
+        function triggerFileSelect() {
+            document.getElementById('fileInput').click();
+        }
+
+        // 处理文件选择
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (file) {
+                uploadFile(file);
+            }
+        }
+
+        // 上传和解析文件
+        async function uploadFile(file) {
+            const formData = new FormData();
+            formData.append('file', file);
+
+            try {
+                // 显示上传中状态
+                showUploadProgress('正在上传文件...', 0);
+
+                // 先读取文件内容
+                uploadedFileContent = await file.text();
+                uploadedFileName = file.name;
+
+                const response = await fetch('/api/upload_file', {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    // 文件信息已经保存
+
+                    // 显示文件信息
+                    showFileInfo(file.name, result);
+                    hideAnalysisProgress();
+                    
+                    addMessageToChat('system', `📁 文件解析成功：${result.parse_status}`);
+                    addMessageToChat('system', `✅ 发现 ${result.valid_conversations} 轮有效对话，可以开始分析`);
+                    
+                } else {
+                    throw new Error(result.error);
+                }
+
+            } catch (error) {
+                hideAnalysisProgress();
+                addMessageToChat('system', `❌ 文件上传失败：${error.message}`);
+                clearFile();
+            }
+        }
+
+        // 显示文件信息
+        function showFileInfo(fileName, parseResult) {
+            const fileInfo = document.getElementById('fileInfo');
+            const uploadZone = document.getElementById('uploadZone');
+            
+            document.getElementById('fileName').textContent = fileName;
+            document.getElementById('fileStats').innerHTML = `
+                📊 总对话数：${parseResult.total_conversations} | 
+                ✅ 有效对话：${parseResult.valid_conversations} | 
+                📋 状态：${parseResult.parse_status}
+            `;
+            
+            uploadZone.style.display = 'none';
+            fileInfo.style.display = 'flex';
+        }
+
+        // 开始文件分析
+        async function startFileAnalysis() {
+            if (!uploadedFileContent || isFileAnalyzing) return;
+
+            isFileAnalyzing = true;
+            const analyzeBtn = document.getElementById('analyzeBtn');
+            analyzeBtn.disabled = true;
+            analyzeBtn.textContent = '分析中...';
+
+            try {
+                showAnalysisProgress();
+                addMessageToChat('system', '🚀 开始批量分析对话内容...');
+
+                // 先确保用户会话已初始化（通过发送一个简单的聊天消息）
+                await fetch('/api/chat', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: '初始化会话'
+                    })
+                });
+
+                const response = await fetch('/api/analyze_file', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        file_content: uploadedFileContent,
+                        file_name: uploadedFileName
+                    })
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    const analysis = result.analysis_result;
+                    
+                    // 显示分析结果
+                    addMessageToChat('system', `✅ 批量分析完成！`);
+                    addMessageToChat('system', `📊 分析统计：`);
+                    addMessageToChat('system', `• 总对话数：${analysis.total_conversations}`);
+                    addMessageToChat('system', `• 成功处理：${analysis.processed_conversations}`);
+                    addMessageToChat('system', `• 提取标签：${analysis.total_extracted_tags}`);
+                    addMessageToChat('system', `• 更新标签：${analysis.total_updated_tags}`);
+                    
+                    if (analysis.user_profile && typeof analysis.user_profile.profile_maturity === 'number') {
+                        addMessageToChat('system', `📈 用户画像成熟度：${(analysis.user_profile.profile_maturity * 100).toFixed(1)}%`);
+                    }
+                    
+                    // 无论如何都刷新用户画像显示
+                    refreshProfile();
+
+                    // 显示分析摘要
+                    if (analysis.summary) {
+                        const summary = analysis.summary;
+                        addMessageToChat('system', `📋 分析摘要：`);
+                        addMessageToChat('system', `• 成功率：${summary.success_rate}%`);
+                        addMessageToChat('system', `• 平均每轮对话标签数：${summary.average_tags_per_conversation}`);
+                        
+                        if (summary.tag_categories && Object.keys(summary.tag_categories).length > 0) {
+                            const categories = Object.entries(summary.tag_categories)
+                                .map(([cat, count]) => `${cat}(${count})`)
+                                .join('、');
+                            addMessageToChat('system', `• 标签分类：${categories}`);
+                        }
+                    }
+
+                } else {
+                    throw new Error(result.error);
+                }
+
+            } catch (error) {
+                addMessageToChat('system', `❌ 批量分析失败：${error.message}`);
+            } finally {
+                hideAnalysisProgress();
+                isFileAnalyzing = false;
+                analyzeBtn.disabled = false;
+                analyzeBtn.textContent = '开始分析';
+            }
+        }
+
+        // 清除文件
+        function clearFile() {
+            const fileInfo = document.getElementById('fileInfo');
+            const uploadZone = document.getElementById('uploadZone');
+            const fileInput = document.getElementById('fileInput');
+            
+            uploadedFileContent = null;
+            uploadedFileName = null;
+            fileInput.value = '';
+            
+            fileInfo.style.display = 'none';
+            uploadZone.style.display = 'block';
+            hideAnalysisProgress();
+        }
+
+        // 显示上传进度
+        function showUploadProgress(message, percent) {
+            const analysisProgress = document.getElementById('analysisProgress');
+            const progressText = document.getElementById('progressText');
+            const progressPercent = document.getElementById('progressPercent');
+            const progressFill = document.getElementById('progressFill');
+            
+            progressText.textContent = message;
+            progressPercent.textContent = `${percent}%`;
+            progressFill.style.width = `${percent}%`;
+            analysisProgress.style.display = 'block';
+        }
+
+        // 显示分析进度
+        function showAnalysisProgress() {
+            showUploadProgress('正在分析对话内容...', 0);
+            
+            // 模拟进度更新
+            let progress = 0;
+            const interval = setInterval(() => {
+                progress += Math.random() * 15;
+                if (progress >= 95) {
+                    progress = 95;
+                    clearInterval(interval);
+                }
+                updateProgress(progress);
+            }, 500);
+        }
+
+        // 更新进度
+        function updateProgress(percent) {
+            const progressPercent = document.getElementById('progressPercent');
+            const progressFill = document.getElementById('progressFill');
+            
+            progressPercent.textContent = `${Math.round(percent)}%`;
+            progressFill.style.width = `${percent}%`;
+        }
+
+        // 隐藏进度
+        function hideAnalysisProgress() {
+            const analysisProgress = document.getElementById('analysisProgress');
+            analysisProgress.style.display = 'none';
+        }
+
+        // 拖拽上传功能
+        function setupDragAndDrop() {
+            const uploadZone = document.getElementById('uploadZone');
+            
+            uploadZone.addEventListener('dragover', (e) => {
+                e.preventDefault();
+                uploadZone.classList.add('dragover');
+            });
+            
+            uploadZone.addEventListener('dragleave', () => {
+                uploadZone.classList.remove('dragover');
+            });
+            
+            uploadZone.addEventListener('drop', (e) => {
+                e.preventDefault();
+                uploadZone.classList.remove('dragover');
+                
+                const files = e.dataTransfer.files;
+                if (files.length > 0) {
+                    const file = files[0];
+                    const allowedTypes = ['.txt', '.json', '.md'];
+                    const fileExt = file.name.toLowerCase().substring(file.name.lastIndexOf('.'));
+                    
+                    if (allowedTypes.includes(fileExt)) {
+                        uploadFile(file);
+                    } else {
+                        addMessageToChat('system', `❌ 不支持的文件类型：${fileExt}。支持的类型：${allowedTypes.join(', ')}`);
+                    }
+                }
+            });
+        }
+
+        // 页面加载完成后的初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('messageInput').focus();
+            setupDragAndDrop();
+            // 刷新用户画像显示
+            refreshProfile();
+        });
+    </script>
+</body>
+</html>

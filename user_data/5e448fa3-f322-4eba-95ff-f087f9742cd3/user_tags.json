@@ -1,0 +1,286 @@
+{
+  "user_id": "5e448fa3-f322-4eba-95ff-f087f9742cd3",
+  "created_at": "2025-09-05T14:33:22.002779",
+  "last_updated": "2025-09-05T14:35:17.302852",
+  "tag_dimensions": {
+    "用户核心画像": {
+      "年龄段": [
+        {
+          "tag_name": "儿童 (4-11岁)",
+          "confidence": 0.4507888805409465,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T14:34:30.784258",
+          "last_reinforced": "2025-09-05T14:34:30.784258",
+          "evidence_list": [
+            "用户询问\"孩子发烧了\"，儿童期也是发烧常见年龄段"
+          ],
+          "decay_rate": 0.1
+        },
+        {
+          "tag_name": "青年 (18-40岁)",
+          "confidence": 0.6363636363636362,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T14:35:17.301316",
+          "last_reinforced": "2025-09-05T14:35:17.301316",
+          "evidence_list": [
+            "用户关注体质调理和生活习惯改善，符合青年群体对健康管理的关注特点"
+          ],
+          "decay_rate": 0.1
+        }
+      ],
+      "性别": [
+        {
+          "tag_name": "女",
+          "confidence": 0.7272727272727273,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T14:35:17.301330",
+          "last_reinforced": "2025-09-05T14:35:17.301330",
+          "evidence_list": [
+            "用户提到'体质虚寒'、'手脚冰凉'等典型女性关注的体质调理问题"
+          ],
+          "decay_rate": 0.1
+        }
+      ],
+      "所在地区": [],
+      "健康角色": [
+        {
+          "tag_name": "个人健康管理者",
+          "confidence": 0.44865551115551117,
+          "reinforcement_count": 4,
+          "first_seen": "2025-09-05T14:33:47.169421",
+          "last_reinforced": "2025-09-05T14:35:17.301333",
+          "evidence_list": [
+            "用户描述'我最近总是失眠'，明确为自己咨询健康问题",
+            "用户主动描述自己的工作压力和加班情况，关注自身健康问题",
+            "用户直接为自己咨询高血压饮食注意事项，使用'我想了解一下'表明是个人健康管理需求",
+            "用户直接为自己咨询体质调理方法，'我体质比较虚寒'"
+          ],
+          "decay_rate": 0.1
+        },
+        {
+          "tag_name": "家庭健康决策者",
+          "confidence": 0.6761833208114199,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T14:34:30.784261",
+          "last_reinforced": "2025-09-05T14:34:30.784261",
+          "evidence_list": [
+            "\"孩子发烧了\"表明用户在为家人（孩子）咨询健康问题"
+          ],
+          "decay_rate": 0.1
+        },
+        {
+          "tag_name": "慢性病患者",
+          "confidence": 0.6611570247933884,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T14:34:50.744612",
+          "last_reinforced": "2025-09-05T14:34:50.744612",
+          "evidence_list": [
+            "用户主动询问高血压的饮食管理建议，表明可能患有高血压需要长期管理"
+          ],
+          "decay_rate": 0.1
+        },
+        {
+          "tag_name": "健康生活追求者",
+          "confidence": 0.7272727272727273,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T14:35:17.301335",
+          "last_reinforced": "2025-09-05T14:35:17.301335",
+          "evidence_list": [
+            "用户主动寻求生活方式改善方法，'有什么调理方法吗？'"
+          ],
+          "decay_rate": 0.1
+        }
+      ]
+    },
+    "产品使用路径与偏好": {
+      "核心功能偏好": [
+        {
+          "tag_name": "AI诊断依赖型",
+          "confidence": 0.6010518407212622,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T14:34:30.784264",
+          "last_reinforced": "2025-09-05T14:34:30.784264",
+          "evidence_list": [
+            "用户描述症状\"发烧38.5度\"并询问处理建议，符合AI诊室功能使用场景"
+          ],
+          "decay_rate": 0.1
+        }
+      ],
+      "交互方式偏好": []
+    },
+    "用户意图与转化阶段": {
+      "具体意图分类": [
+        {
+          "tag_name": "症状自我评估",
+          "confidence": 0.42407981328435884,
+          "reinforcement_count": 2,
+          "first_seen": "2025-09-05T14:33:47.169427",
+          "last_reinforced": "2025-09-05T14:34:30.784266",
+          "evidence_list": [
+            "用户描述'我最近总是失眠，晚上躺在床上翻来覆去睡不着，白天工作的时候又很困很疲惫'，属于症状描述和初步评估",
+            "\"孩子发烧了，体温38.5度，应该怎么处理？\"属于典型的症状评估意图"
+          ],
+          "decay_rate": 0.1
+        },
+        {
+          "tag_name": "生活方式改善",
+          "confidence": 0.5470968425513879,
+          "reinforcement_count": 3,
+          "first_seen": "2025-09-05T14:34:03.538462",
+          "last_reinforced": "2025-09-05T14:35:17.301338",
+          "evidence_list": [
+            "用户描述工作压力大和加班情况，寻求健康管理建议",
+            "用户明确询问'高血压的饮食注意事项，平时应该吃什么不应该吃什么'，属于生活方式改善意图",
+            "用户明确询问'有什么调理方法吗？'，寻求体质改善的生活方式建议"
+          ],
+          "decay_rate": 0.1
+        },
+        {
+          "tag_name": "寻求就医指导",
+          "confidence": 0.6010518407212622,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T14:34:30.784268",
+          "last_reinforced": "2025-09-05T14:34:30.784268",
+          "evidence_list": [
+            "\"需要立即去医院吗？\"明确询问就医指导"
+          ],
+          "decay_rate": 0.1
+        }
+      ],
+      "转化阶段": [
+        {
+          "tag_name": "问题分析阶段",
+          "confidence": 0.4151693003965731,
+          "reinforcement_count": 4,
+          "first_seen": "2025-09-05T14:33:47.169429",
+          "last_reinforced": "2025-09-05T14:35:17.301353",
+          "evidence_list": [
+            "用户正在描述具体健康问题寻求分析和建议",
+            "用户正在使用AI功能分析具体的健康问题（发烧处理）",
+            "用户针对具体健康问题（高血压）寻求饮食管理建议，处于分析具体健康问题阶段",
+            "用户描述具体症状（怕冷、手脚冰凉）并寻求调理方法，处于分析健康问题阶段"
+          ],
+          "decay_rate": 0.1
+        },
+        {
+          "tag_name": "信息认知阶段",
+          "confidence": 0.4098080732190422,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T14:34:03.538465",
+          "last_reinforced": "2025-09-05T14:34:03.538465",
+          "evidence_list": [
+            "用户主动分享健康困扰，处于了解健康管理方法的阶段"
+          ],
+          "decay_rate": 0.1
+        }
+      ]
+    },
+    "用户商业价值": {
+      "价值等级": [
+        {
+          "tag_name": "高潜力用户",
+          "confidence": 0.5259203606311043,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T14:34:30.784272",
+          "last_reinforced": "2025-09-05T14:34:30.784272",
+          "evidence_list": [
+            "使用AI诊断功能咨询儿童健康问题，有转化为付费问诊的潜力"
+          ],
+          "decay_rate": 0.1
+        },
+        {
+          "tag_name": "高活跃用户",
+          "confidence": 0.5454545454545454,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T14:35:17.301356",
+          "last_reinforced": "2025-09-05T14:35:17.301356",
+          "evidence_list": [
+            "用户主动咨询健康调理方法，表现出对健康管理的关注"
+          ],
+          "decay_rate": 0.1
+        }
+      ],
+      "付费敏感度": [
+        {
+          "tag_name": "纯免费用户",
+          "confidence": 0.6363636363636362,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T14:35:17.301358",
+          "last_reinforced": "2025-09-05T14:35:17.301358",
+          "evidence_list": [
+            "用户仅咨询免费的健康调理建议，未涉及付费服务"
+          ],
+          "decay_rate": 0.1
+        }
+      ]
+    }
+  },
+  "profile_maturity": 0.8,
+  "total_interactions": 6,
+  "dimension_summaries": [
+    {
+      "dimension_name": "用户核心画像",
+      "subdimension_name": "年龄段",
+      "dominant_tag": "青年 (18-40岁)",
+      "confidence": 0.6363636363636362,
+      "tag_count": 2,
+      "last_updated": "2025-09-05T14:35:17.301316"
+    },
+    {
+      "dimension_name": "用户核心画像",
+      "subdimension_name": "性别",
+      "dominant_tag": "女",
+      "confidence": 0.7272727272727273,
+      "tag_count": 1,
+      "last_updated": "2025-09-05T14:35:17.301330"
+    },
+    {
+      "dimension_name": "用户核心画像",
+      "subdimension_name": "健康角色",
+      "dominant_tag": "健康生活追求者",
+      "confidence": 0.7272727272727273,
+      "tag_count": 4,
+      "last_updated": "2025-09-05T14:35:17.301335"
+    },
+    {
+      "dimension_name": "产品使用路径与偏好",
+      "subdimension_name": "核心功能偏好",
+      "dominant_tag": "AI诊断依赖型",
+      "confidence": 0.6010518407212622,
+      "tag_count": 1,
+      "last_updated": "2025-09-05T14:34:30.784264"
+    },
+    {
+      "dimension_name": "用户意图与转化阶段",
+      "subdimension_name": "具体意图分类",
+      "dominant_tag": "寻求就医指导",
+      "confidence": 0.6010518407212622,
+      "tag_count": 3,
+      "last_updated": "2025-09-05T14:34:30.784268"
+    },
+    {
+      "dimension_name": "用户意图与转化阶段",
+      "subdimension_name": "转化阶段",
+      "dominant_tag": "问题分析阶段",
+      "confidence": 0.4151693003965731,
+      "tag_count": 2,
+      "last_updated": "2025-09-05T14:35:17.301353"
+    },
+    {
+      "dimension_name": "用户商业价值",
+      "subdimension_name": "价值等级",
+      "dominant_tag": "高活跃用户",
+      "confidence": 0.5454545454545454,
+      "tag_count": 2,
+      "last_updated": "2025-09-05T14:35:17.301356"
+    },
+    {
+      "dimension_name": "用户商业价值",
+      "subdimension_name": "付费敏感度",
+      "dominant_tag": "纯免费用户",
+      "confidence": 0.6363636363636362,
+      "tag_count": 1,
+      "last_updated": "2025-09-05T14:35:17.301358"
+    }
+  ]
+}

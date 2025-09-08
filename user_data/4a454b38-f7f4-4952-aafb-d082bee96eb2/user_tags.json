@@ -1,0 +1,134 @@
+{
+  "user_id": "4a454b38-f7f4-4952-aafb-d082bee96eb2",
+  "created_at": "2025-09-05T15:04:24.056813",
+  "last_updated": "2025-09-05T15:05:09.769514",
+  "tag_dimensions": {
+    "用户核心画像": {
+      "年龄段": [
+        {
+          "tag_name": "青年 (18-40岁)",
+          "confidence": 0.6492424242424243,
+          "reinforcement_count": 2,
+          "first_seen": "2025-09-05T15:04:52.314428",
+          "last_reinforced": "2025-09-05T15:05:09.769050",
+          "evidence_list": [
+            "用户提到'白天工作的时候又很困很疲惫'，表明有工作状态，符合青年年龄段特征",
+            "用户明确表示'我是一个30岁的上班族'"
+          ],
+          "decay_rate": 0.1
+        }
+      ],
+      "性别": [],
+      "所在地区": [],
+      "健康角色": [
+        {
+          "tag_name": "个人健康管理者",
+          "confidence": 0.6772727272727272,
+          "reinforcement_count": 2,
+          "first_seen": "2025-09-05T15:04:52.314491",
+          "last_reinforced": "2025-09-05T15:05:09.769065",
+          "evidence_list": [
+            "用户描述'我最近总是失眠'，为自己咨询健康问题",
+            "用户描述自己的工作压力和加班情况，表明是为自己咨询健康问题"
+          ],
+          "decay_rate": 0.1
+        }
+      ]
+    },
+    "产品使用路径与偏好": {
+      "核心功能偏好": [],
+      "交互方式偏好": []
+    },
+    "用户意图与转化阶段": {
+      "具体意图分类": [
+        {
+          "tag_name": "症状自我评估",
+          "confidence": 0.7438016528925618,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T15:04:52.314497",
+          "last_reinforced": "2025-09-05T15:04:52.314497",
+          "evidence_list": [
+            "用户描述失眠症状'晚上躺在床上翻来覆去睡不着，白天工作的时候又很困很疲惫'"
+          ],
+          "decay_rate": 0.1
+        },
+        {
+          "tag_name": "生活方式改善",
+          "confidence": 0.5462121212121211,
+          "reinforcement_count": 2,
+          "first_seen": "2025-09-05T15:04:52.314501",
+          "last_reinforced": "2025-09-05T15:05:09.769071",
+          "evidence_list": [
+            "用户寻求失眠问题的解决方案，隐含改善生活方式的意图",
+            "用户描述工作压力大和经常加班，暗示寻求改善生活方式的建议"
+          ],
+          "decay_rate": 0.1
+        }
+      ],
+      "转化阶段": [
+        {
+          "tag_name": "问题分析阶段",
+          "confidence": 0.6611570247933884,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T15:04:52.314505",
+          "last_reinforced": "2025-09-05T15:04:52.314505",
+          "evidence_list": [
+            "用户正在分析具体的失眠健康问题"
+          ],
+          "decay_rate": 0.1
+        },
+        {
+          "tag_name": "信息认知阶段",
+          "confidence": 0.5454545454545454,
+          "reinforcement_count": 1,
+          "first_seen": "2025-09-05T15:05:09.769075",
+          "last_reinforced": "2025-09-05T15:05:09.769075",
+          "evidence_list": [
+            "用户描述自身情况但未明确寻求具体服务，处于初步咨询阶段"
+          ],
+          "decay_rate": 0.1
+        }
+      ]
+    },
+    "用户商业价值": {
+      "价值等级": [],
+      "付费敏感度": []
+    }
+  },
+  "profile_maturity": 0.39999999999999997,
+  "total_interactions": 3,
+  "dimension_summaries": [
+    {
+      "dimension_name": "用户核心画像",
+      "subdimension_name": "年龄段",
+      "dominant_tag": "青年 (18-40岁)",
+      "confidence": 0.6492424242424243,
+      "tag_count": 1,
+      "last_updated": "2025-09-05T15:05:09.769050"
+    },
+    {
+      "dimension_name": "用户核心画像",
+      "subdimension_name": "健康角色",
+      "dominant_tag": "个人健康管理者",
+      "confidence": 0.6772727272727272,
+      "tag_count": 1,
+      "last_updated": "2025-09-05T15:05:09.769065"
+    },
+    {
+      "dimension_name": "用户意图与转化阶段",
+      "subdimension_name": "具体意图分类",
+      "dominant_tag": "症状自我评估",
+      "confidence": 0.7438016528925618,
+      "tag_count": 2,
+      "last_updated": "2025-09-05T15:04:52.314497"
+    },
+    {
+      "dimension_name": "用户意图与转化阶段",
+      "subdimension_name": "转化阶段",
+      "dominant_tag": "问题分析阶段",
+      "confidence": 0.6611570247933884,
+      "tag_count": 2,
+      "last_updated": "2025-09-05T15:04:52.314505"
+    }
+  ]
+}

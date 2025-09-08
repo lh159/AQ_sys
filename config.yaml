@@ -1,0 +1,19 @@
+# AQ-用户标签系统配置
+app:
+  name: "AQ-用户标签系统"
+  version: "1.0.0"
+  debug: true
+
+llm:
+  provider: "deepseek"
+  model: "deepseek-chat"
+  api_key: "sk-82ef8a72fca243c68624ed2c909ae906"  # 真实的deepseek api key
+  base_url: "https://api.deepseek.com"
+  max_tokens: 1000
+  temperature: 0.3
+
+storage:
+  type: "local"
+  base_path: "./user_data"
+  backup_enabled: true
+  cleanup_days: 90
